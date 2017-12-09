@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   A thumbnail view for iOS. 
                    DESC
 
-  #s.homepage     = ""
+  s.homepage     = "https://github.com/luispadron/LPThumbnailView"
   #s.screenshots  = ""
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
