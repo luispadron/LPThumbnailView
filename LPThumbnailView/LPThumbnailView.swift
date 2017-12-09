@@ -8,6 +8,14 @@
 
 import UIKit
 
+public enum LPThumbnailViewAnimationStyle {
+    case enterFromRight
+    case enterFromLeft
+    case enterFromTop
+    case enterFromBottom
+    case crossDissolve
+}
+
 open class LPThumbnailView: UIView {
 
     // MARK: Members/Properties
@@ -18,11 +26,18 @@ open class LPThumbnailView: UIView {
         didSet { self.imageView.contentMode = self.imageScaleMode }
     }
 
-    public var counterViewSize: CGFloat = 35.0 {
+    public var automaticallyCalculatesCounterViewSize: Bool = true
+
+    public var counterViewSize: CGFloat = 50 {
         didSet {
-            self.counterViewHeightConstraint?.constant = self.counterViewSize
+            guard !automaticallyCalculatesCounterViewSize else { return }
             self.counterViewWidthConstraint?.constant = self.counterViewSize
+            self.counterViewHeightConstraint?.constant = self.counterViewSize
         }
+    }
+
+    private var automaticCounterViewSize: CGFloat {
+        return (self.frame.width + self.frame.height) * 0.15
     }
 
     public var counterViewTopSpacing: CGFloat = 4.0 {
@@ -37,7 +52,19 @@ open class LPThumbnailView: UIView {
         }
     }
 
-    public var animationDuration: TimeInterval = 0.5
+    public var counterViewLabel: UILabel {
+        return self.counterView.counterLabel
+    }
+
+    public var counterViewBackgroundColor: UIColor = UIColor.cyan {
+        didSet { self.counterView.backgroundColor = self.counterViewBackgroundColor }
+    }
+
+    public var animationDuration: TimeInterval = 0.4
+
+    public var animationStyle: LPThumbnailViewAnimationStyle = .enterFromRight
+
+    public var counterViewAnimationOptions: UIViewAnimationOptions = [.transitionFlipFromBottom]
 
     private var counterViewTopConstraint: NSLayoutConstraint? = nil
 
@@ -68,7 +95,7 @@ open class LPThumbnailView: UIView {
         self.images.append(img)
         guard animated else {
             self.imageView.image = img
-            self.counterView.counterLabel.text = "\(images.count)"
+            self.counterViewLabel.text = "\(images.count)"
             return
         }
         self.animateImageAddition(img)
@@ -96,8 +123,8 @@ open class LPThumbnailView: UIView {
                                                                         constant: self.counterViewTopSpacing)
         self.counterViewTrailingConstraint = self.counterView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                                                                 constant: -self.counterViewTrailingSpacing)
-        self.counterViewHeightConstraint = self.counterView.heightAnchor.constraint(equalToConstant: self.counterViewSize)
-        self.counterViewWidthConstraint = self.counterView.widthAnchor.constraint(equalToConstant: self.counterViewSize)
+        self.counterViewHeightConstraint = self.counterView.heightAnchor.constraint(equalToConstant: self.automaticCounterViewSize)
+        self.counterViewWidthConstraint = self.counterView.widthAnchor.constraint(equalToConstant: self.automaticCounterViewSize)
         self.counterViewTopConstraint?.isActive = true
         self.counterViewTrailingConstraint?.isActive = true
         self.counterViewHeightConstraint?.isActive = true
@@ -107,8 +134,29 @@ open class LPThumbnailView: UIView {
     private func createTemporaryImageView(with image: UIImage) -> UIImageView {
         let imgViewBounds = self.imageView.frame
         let tempImageView = UIImageView()
-        tempImageView.frame = CGRect(x: imgViewBounds.origin.x + (imgViewBounds.width * 0.90) + 60,
-                                     y: imgViewBounds.origin.y,
+
+        let xOffset: CGFloat
+        let yOffset: CGFloat
+        switch self.animationStyle {
+        case .enterFromRight:
+            xOffset = (imgViewBounds.width * 0.90) + 60
+            yOffset = 0
+        case .enterFromLeft:
+            xOffset = -(imgViewBounds.width * 0.90) - 60
+            yOffset = 0
+        case .enterFromTop:
+            xOffset = 0
+            yOffset = -(imgViewBounds.height * 0.90) - 60
+        case .enterFromBottom:
+            xOffset = 0
+            yOffset = (imgViewBounds.height * 0.90) + 60
+        case .crossDissolve:
+            xOffset = 0
+            yOffset = 0
+        }
+
+        tempImageView.frame = CGRect(x: imgViewBounds.origin.x + xOffset,
+                                     y: imgViewBounds.origin.y + yOffset,
                                      width: imgViewBounds.width * 0.90,
                                      height: imgViewBounds.height * 0.90)
         tempImageView.clipsToBounds = true
@@ -126,7 +174,10 @@ open class LPThumbnailView: UIView {
                                 options: [],
                                 animations: {
                                     UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3) {
-                                        tempImgView.frame = self.imageView.frame
+                                        tempImgView.frame = CGRect(x: self.imageView.frame.origin.x,
+                                                                   y: self.imageView.frame.origin.y,
+                                                                   width: tempImgView.frame.width,
+                                                                   height: tempImgView.frame.height)
                                         tempImgView.layoutIfNeeded()
                                     }
                                     UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3) {
@@ -143,11 +194,11 @@ open class LPThumbnailView: UIView {
                                     }
 
                                     UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
-                                        UIView.transition(with: self.counterView.counterLabel,
+                                        UIView.transition(with: self.counterViewLabel,
                                                           duration: self.animationDuration * (1/3),
-                                                          options: .transitionFlipFromBottom,
+                                                          options: self.counterViewAnimationOptions,
                                                           animations: {
-                                                            self.counterView.counterLabel.text = "\(self.images.count)"
+                                                            self.counterViewLabel.text = "\(self.images.count)"
                                                           },
                                                           completion: nil)
                                         self.imageView.transform = CGAffineTransform.identity
@@ -168,6 +219,7 @@ open class LPThumbnailView: UIView {
 
     private lazy var counterView: LPThumbnailCounterView = {
         let counterView = LPThumbnailCounterView()
+        counterView.backgroundColor = self.counterViewBackgroundColor
         return counterView
     }()
 }

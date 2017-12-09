@@ -31,7 +31,6 @@ internal class LPThumbnailCounterView: UIView {
     private func initialize() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = self.bounds.width / 2
-        self.backgroundColor = .cyan
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowRadius = 2
         self.layer.shadowOpacity = 0.4
@@ -50,7 +49,7 @@ internal class LPThumbnailCounterView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
         label.textAlignment = .center
         return label
     }()
