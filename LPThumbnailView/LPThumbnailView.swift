@@ -93,6 +93,7 @@ open class LPThumbnailView: UIView {
 
     public func addImage(_ img: UIImage, animated: Bool = true) {
         self.images.append(img)
+        self.toggleCounterView()
         guard animated else {
             self.imageView.image = img
             self.counterViewLabel.text = "\(images.count)"
@@ -208,6 +209,24 @@ open class LPThumbnailView: UIView {
         )
     }
 
+    private func toggleCounterView() {
+        guard self.images.count > 1 else {
+            // Hide counter view
+            UIView.animate(withDuration: 0.2, animations: {
+                self.counterView.alpha = 0.0
+            }, completion: { _ in
+                self.counterView.isHidden = true
+            })
+            return
+        }
+
+        // Show counter view
+        self.counterView.isHidden = false
+        UIView.animate(withDuration: 0.2) {
+            self.counterView.alpha = 1.0
+        }
+    }
+
     // MARK: Subviews
 
     private lazy var imageView: LPShadowImageView = {
@@ -220,6 +239,7 @@ open class LPThumbnailView: UIView {
     private lazy var counterView: LPThumbnailCounterView = {
         let counterView = LPThumbnailCounterView()
         counterView.backgroundColor = self.counterViewBackgroundColor
+        counterView.isHidden = true
         return counterView
     }()
 }
