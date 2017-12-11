@@ -60,8 +60,6 @@ open class LPThumbnailView: UIView {
         didSet { self.counterView.backgroundColor = self.counterViewBackgroundColor }
     }
 
-    public var animationDuration: TimeInterval = 0.4
-
     public var animationStyle: LPThumbnailViewAnimationStyle = .enterFromRight
 
     public var counterViewAnimationOptions: UIViewAnimationOptions = [.transitionFlipFromBottom]
@@ -91,15 +89,22 @@ open class LPThumbnailView: UIView {
 
     // MARK: Actions
 
-    public func addImage(_ img: UIImage, animated: Bool = true) {
+    public func addImage(_ img: UIImage, duration: TimeInterval = 0.4) {
         self.images.append(img)
         self.toggleCounterView()
-        guard animated else {
+        guard duration > 0 else {
             self.imageView.image = img
             self.counterViewLabel.text = "\(images.count)"
             return
         }
-        self.animateImageAddition(img)
+        self.animateImageAddition(img, duration: duration)
+    }
+
+    public func addImageWithContext(_ tempImageView: UIImageView, duration: TimeInterval = 1.0) {
+        guard let img = tempImageView.image else { return }
+        self.images.append(img)
+        self.toggleCounterView()
+        self.animateImageAdditionWithContext(tempImageView, img: img, duration: duration)
     }
 
     // MARK: Helpers
@@ -166,11 +171,11 @@ open class LPThumbnailView: UIView {
         return tempImageView
     }
 
-    private func animateImageAddition(_ img: UIImage) {
+    private func animateImageAddition(_ img: UIImage, duration: TimeInterval) {
         let tempImgView = createTemporaryImageView(with: img)
         self.insertSubview(tempImgView, at: 0)
 
-        UIView.animateKeyframes(withDuration: animationDuration,
+        UIView.animateKeyframes(withDuration: duration,
                                 delay: 0.0,
                                 options: [],
                                 animations: {
@@ -179,33 +184,70 @@ open class LPThumbnailView: UIView {
                                                                    y: self.imageView.frame.origin.y,
                                                                    width: tempImgView.frame.width,
                                                                    height: tempImgView.frame.height)
-                                        tempImgView.layoutIfNeeded()
                                     }
                                     UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3) {
                                         self.imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-                                        let trasitionDuration = self.animationDuration - (self.animationDuration * 1/3)
-                                        UIView.transition(with: self.imageView,
-                                                          duration: trasitionDuration * (1/3),
-                                                          options: .transitionCrossDissolve,
-                                                          animations: {
-                                                            self.imageView.image = img
-                                                          },
-                                                          completion: nil)
+                                        self.animateImageChange(to: img, duration: duration * (1/3))
                                         tempImgView.alpha = 0.0
                                     }
 
                                     UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
-                                        UIView.transition(with: self.counterViewLabel,
-                                                          duration: self.animationDuration * (1/3),
-                                                          options: self.counterViewAnimationOptions,
-                                                          animations: {
-                                                            self.counterViewLabel.text = "\(self.images.count)"
-                                                          },
-                                                          completion: nil)
+                                        self.animateCounterLabel(duration: duration * (1/3))
                                         self.imageView.transform = CGAffineTransform.identity
                                     }
                                 },
-                                completion: nil
+                                completion: { _ in
+                                    // Remove temp image view
+                                    tempImgView.removeFromSuperview()
+                                }
+        )
+    }
+
+    private func animateImageAdditionWithContext(_ tempImageView: UIImageView, img: UIImage, duration: TimeInterval) {
+        let imageViewFrame = self.imageView.convert(CGRect.zero, to: tempImageView.superview)
+        UIView.animateKeyframes(withDuration: duration,
+                                delay: 0.2,
+                                options: [],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2/4) {
+                                        tempImageView.frame = CGRect(x: imageViewFrame.origin.x,
+                                                                     y: imageViewFrame.origin.y,
+                                                                     width: self.imageView.frame.width,
+                                                                     height: self.imageView.frame.height)
+                                    }
+
+                                    UIView.addKeyframe(withRelativeStartTime: 2/4, relativeDuration: 1/4) {
+                                        tempImageView.alpha = 0.0
+                                        self.imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                                        self.animateImageChange(to: img, duration: 0.25)
+                                    }
+
+                                    UIView.addKeyframe(withRelativeStartTime: 3/4, relativeDuration: 1/4) {
+                                        self.animateCounterLabel(duration: duration * 0.25)
+                                        self.imageView.transform = CGAffineTransform.identity
+                                    }
+                                },
+                                completion: { _ in
+                                    tempImageView.removeFromSuperview()
+                                }
+        )
+    }
+
+    private func animateImageChange(to newImage: UIImage, duration: TimeInterval) {
+        UIView.transition(with: self.imageView,
+                          duration: duration,
+                          options: .transitionCrossDissolve,
+                          animations: { self.imageView.image = newImage },
+                          completion: nil
+        )
+    }
+
+    private func animateCounterLabel(duration: TimeInterval) {
+        UIView.transition(with: self.counterViewLabel,
+                          duration: duration,
+                          options: self.counterViewAnimationOptions,
+                          animations: { self.counterViewLabel.text = "\(self.images.count)" },
+                          completion: nil
         )
     }
 
