@@ -6,33 +6,43 @@
 //  Copyright © 2017 Luis Padron. All rights reserved.
 //
 
+/**
+ LPShadowImageView
+
+ A simple view which contains an image view.
+ This is needed to add both rounded corners AND shadow.
+ Used inside of `LPThumbnailView`
+ */
 internal class LPShadowImageView: UIView {
     // MARK: Members/Properties
 
+    /// The image for the `imageView`
     internal var image: UIImage? = nil {
-        didSet {
-            self.imageView.image = self.image
-        }
+        didSet { self.imageView.image = self.image }
     }
 
     // MARK: Override
 
+    /// Overriden init
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }
 
+    /// Overriden init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
     }
 
+    /// The content mode for the `imageView`
     override var contentMode: UIViewContentMode {
         didSet { self.imageView.contentMode = self.contentMode }
     }
 
     // MARK: Helpers
 
+    /// Helper function to initialize the view.
     private func initialize() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowRadius = 4
@@ -47,6 +57,7 @@ internal class LPShadowImageView: UIView {
 
     // MARK: Subviews
 
+    /// The image view which will be used inside of `LPThumbnailView`
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false

@@ -37,6 +37,9 @@ open class LPThumbnailView: UIView {
     // MARK: Public members/properties
 
     /**
+     The images which the `LPThumbnailView` will display.
+
+     To add images you must call `addImage` or `addImageWithContext`
      */
     public private(set) var images: [UIImage] = [UIImage]()
 
@@ -44,8 +47,19 @@ open class LPThumbnailView: UIView {
         didSet { self.imageView.contentMode = self.imageScaleMode }
     }
 
+    /**
+     Whether or not the size of the counter view should be calculated automatically.
+
+     If so, the counter view's size will be a ratio of the `LPThumbnailView`, otherwise
+     `counterViewSize` will be used as the size.
+     */
     public var automaticallyCalculatesCounterViewSize: Bool = true
 
+    /**
+     The size of counter view and it's label.
+
+     Only used when `automaticallyCalculatesCounterViewSize` is `false`.
+     */
     public var counterViewSize: CGFloat = 50 {
         didSet {
             guard !automaticallyCalculatesCounterViewSize else { return }
@@ -54,52 +68,84 @@ open class LPThumbnailView: UIView {
         }
     }
 
-    private var automaticCounterViewSize: CGFloat {
-        return (self.frame.width + self.frame.height) * 0.15
-    }
-
+    /**
+     The amount of top spacing from the `LPThumbnailView` parent view to give to the counter view and label.
+     */
     public var counterViewTopSpacing: CGFloat = 4.0 {
         didSet { self.counterViewTopConstraint?.constant = self.counterViewTopSpacing }
     }
 
+    /**
+     The amount of trailing spacing from the `LPThumbnailView` parent view to give to the counter view and label.
+     */
     public var counterViewTrailingSpacing: CGFloat = 2.0 {
         didSet { self.counterViewTrailingConstraint?.constant = -self.counterViewTrailingSpacing }
     }
 
+    /**
+     An accessor for the label which displays the amount of images in the counter view.
+     */
     public var counterViewLabel: UILabel {
         return self.counterView.counterLabel
     }
 
+    /**
+     The background color for the counter view which counts the number of images in the view.
+     */
     public var counterViewBackgroundColor: UIColor = UIColor.cyan {
         didSet { self.counterView.backgroundColor = self.counterViewBackgroundColor }
     }
 
+    /**
+     The animation style used when calling `addImage`
+     */
     public var animationStyle: LPThumbnailViewAnimationStyle = .crossDissolve
 
+    /**
+     The animation options used when animating the counter view label change.
+     */
     public var counterViewAnimationOptions: UIViewAnimationOptions = [.transitionFlipFromBottom]
 
+    /**
+     Whether or not this view automatically hides it self when there are no images to display.
+
+     This is `true` by default.
+     */
     public var hidesWhenEmpty: Bool = true
 
     // MARK: Private members/properties
 
+    /// The top constraint for the counter view
     private var counterViewTopConstraint: NSLayoutConstraint? = nil
 
+    /// The trailing constraints for the counter view
     private var counterViewTrailingConstraint: NSLayoutConstraint? = nil
 
+    /// The height constraint for the counter view
     private var counterViewHeightConstraint: NSLayoutConstraint? = nil
 
+    /// The width constraint for the counter view
     private var counterViewWidthConstraint: NSLayoutConstraint? = nil
 
+    /// The scale multiplier for the imave view, i.e how much the image view should take up of the entire view.
+    /// Value must be between 0 and 1.
     private let imageViewScaleMultiplier: CGFloat = 0.70
+
+    /// The calculated ratio size for the image view
+    private var automaticCounterViewSize: CGFloat {
+        return (self.frame.width + self.frame.height) * 0.15
+    }
 
 
     // MARK: Overrides
 
+    /// Overriden initializer.
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }
 
+    /// Overriden initializer.
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
@@ -107,20 +153,46 @@ open class LPThumbnailView: UIView {
 
     // MARK: Public API
 
-    public func addImage(_ img: UIImage, duration: TimeInterval = 0.4) {
-        self.images.append(img)
+    /**
+     Adds an image to the `images` array and performs an animation.
+
+     Will animate with `duration` length, if `duration = 0` will not animate and will just perform changes instantly.
+     Animation style performed depends on `animationStyle` property.
+
+     - Parameters:
+        - image: The image to add.
+        - duration: How long to animate for, if this is 0, no animation is performed.
+     */
+    public func addImage(_ image: UIImage, duration: TimeInterval = 0.4) {
+        self.images.append(image)
         self.toggleSelfVisibility()
         self.toggleCounterView()
         // Dont animate
         guard duration > 0 else {
-            self.imageView.image = img
+            self.imageView.image = image
             self.counterViewLabel.text = "\(images.count)"
             return
         }
         // Animate
-        self.animateImageAddition(img, duration: duration)
+        self.animateImageAddition(image, duration: duration)
     }
 
+    /**
+     Adds an image to the `images` array and performs an animation with context.
+
+     This animation differs from `addImage` since it uses a temporary image view that was created outside of this instance.
+     It then animates that temporary image view into the correct position and frame and performs an animation to make it look
+     like the temporary image view was added to this thumbnail view.
+
+     The image from the temporary image view is then used to become the new main thumbail for this view.
+
+     ## Important
+     `tempImageView` is removed from it's superview after this function is called
+
+     - Parameters:
+        - tempImageView: The temporary image view which will be animated.
+        - duration: How long to animate for.
+     */
     public func addImageWithContext(_ tempImageView: UIImageView, duration: TimeInterval = 1.0) {
         guard let img = tempImageView.image else { return }
         self.images.append(img)
@@ -129,6 +201,14 @@ open class LPThumbnailView: UIView {
         self.animateImageAdditionWithContext(tempImageView, img: img, duration: duration)
     }
 
+    /**
+     Removes the __last__ image in `images` and performs an animation.
+
+     __Requires__ that there be at least 1 image in the `images` array.
+
+     - Parameters:
+        - duration: How long to animate for, if this value is 0, no animation is performed.
+     */
     public func removeImage(duration: TimeInterval = 0.7) {
         self.images.removeLast()
         self.toggleSelfVisibility()
@@ -146,6 +226,15 @@ open class LPThumbnailView: UIView {
         self.animateImageRemoval(to: toImage, duration: duration)
     }
 
+    /**
+     Removes the image in `images` at the specified index and performs an animation.
+
+     __Requires__ that the index is a valid index of `images`
+
+     - Parameters:
+        - index: The index of the image to remove.
+        - duration: How long to animate for, if this value is 0, no animation is performed.
+     */
     public func removeImage(at index: Int, duration: TimeInterval = 0.7) {
         if index != self.images.count - 1, duration == 0 {
             // The image being removed isn't the one being displayed so we can just remove it with no animation.
@@ -163,6 +252,16 @@ open class LPThumbnailView: UIView {
         }
     }
 
+    /**
+     Removes the `images` sent in from this views `images` array and performs an animation if and only if
+     one of the images removed is main thumbnail image of this view.
+
+     If any image in `images` is not in this views `images` the removal is ignored.
+
+     - Parameters:
+        - images: The images to remove.
+        - duration: How long to animate for if image removed is currently being displayed.
+     */
     public func removeImages(_ images: [UIImage], duration: TimeInterval = 0.7) {
         var displayedImageRemoved: Bool = false
         for img in images {
@@ -187,6 +286,7 @@ open class LPThumbnailView: UIView {
 
     // MARK: Subviews
 
+    /// The image view which will hold the thumbnail for this view.
     private lazy var imageView: LPShadowImageView = {
         let view = LPShadowImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -194,6 +294,7 @@ open class LPThumbnailView: UIView {
         return view
     }()
 
+    /// The counter view which contains a label and counts the number of images in `images`.
     private lazy var counterView: LPThumbnailCounterView = {
         let counterView = LPThumbnailCounterView()
         counterView.backgroundColor = self.counterViewBackgroundColor
@@ -206,6 +307,7 @@ open class LPThumbnailView: UIView {
 
 private extension LPThumbnailView {
 
+    /// Helper which adds subviews and applies any constraints
     private func initialize() {
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -215,6 +317,7 @@ private extension LPThumbnailView {
         self.isHidden = self.hidesWhenEmpty
     }
 
+    /// Creates constraints for the image view and counter view
     private func createConstraints() {
         // Add image view constraints
         self.imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -235,6 +338,7 @@ private extension LPThumbnailView {
         self.counterViewWidthConstraint?.isActive = true
     }
 
+    /// Creates a temporary image view which will be used to animate an image addition
     private func createTemporaryImageView(with image: UIImage) -> UIImageView {
         let imgViewBounds = self.imageView.frame
         let tempImageView = UIImageView()
@@ -269,6 +373,8 @@ private extension LPThumbnailView {
         return tempImageView
     }
 
+    /// Toggles the visibilty of self if `hidesWhenEmpty` is true.
+    /// If `images.count` is 0 then this view will hide, otherwise it shows.
     private func toggleSelfVisibility() {
         guard self.hidesWhenEmpty else { return }
         UIView.animate(withDuration: 0.2, animations: {
@@ -278,6 +384,7 @@ private extension LPThumbnailView {
         })
     }
 
+    /// Toggles the counterview, shows if `images.count` is greater than 1, hides otherwise.
     private func toggleCounterView() {
         guard self.images.count > 1 else {
             // Hide counter view
@@ -301,6 +408,7 @@ private extension LPThumbnailView {
 
 private extension LPThumbnailView {
 
+    /// Animates the addition of an image.
     private func animateImageAddition(_ img: UIImage, duration: TimeInterval) {
         // If cross disolve dont perform frame animation changes
         switch self.animationStyle {
@@ -360,6 +468,7 @@ private extension LPThumbnailView {
         }
     }
 
+    /// Animates the addition of an image using a temporary image view provided when calling `addImageWithContext`
     private func animateImageAdditionWithContext(_ tempImageView: UIImageView, img: UIImage, duration: TimeInterval) {
         let imageViewFrame = self.imageView.convert(CGRect.zero, to: tempImageView.superview)
         UIView.animateKeyframes(withDuration: duration,
@@ -390,6 +499,7 @@ private extension LPThumbnailView {
         )
     }
 
+    /// Animates the removal of an image, only called when the main display image is removed.
     private func animateImageRemoval(to image: UIImage, duration: TimeInterval) {
         UIView.animateKeyframes(withDuration: duration,
                                 delay: 0.0,
@@ -411,6 +521,7 @@ private extension LPThumbnailView {
                                 completion: nil)
     }
 
+    /// Animates the `imageView`'s image being updated.
     private func animateImageChange(to newImage: UIImage, duration: TimeInterval) {
         UIView.transition(with: self.imageView,
                           duration: duration,
@@ -420,6 +531,7 @@ private extension LPThumbnailView {
         )
     }
 
+    /// Animates the counter label being changed.
     private func animateCounterLabel(duration: TimeInterval) {
         UIView.transition(with: self.counterViewLabel,
                           duration: duration,

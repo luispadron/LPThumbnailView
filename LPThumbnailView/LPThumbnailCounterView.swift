@@ -8,19 +8,27 @@
 
 import UIKit
 
+/**
+ LPThumbnailCounterView
+
+ A circular view with a label, used inside of `LPThumbnailView`.
+ */
 internal class LPThumbnailCounterView: UIView {
     // MARK: Override
 
+    /// Overriden init
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }
 
+    /// Overriden init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
     }
 
+    /// Makes sure to update the corner radius on any bound changes.
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = self.bounds.width / 2
@@ -28,6 +36,7 @@ internal class LPThumbnailCounterView: UIView {
 
     // MARK: Helpers
 
+    /// Helper function to initialize the view
     private func initialize() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = self.bounds.width / 2
@@ -45,6 +54,7 @@ internal class LPThumbnailCounterView: UIView {
 
     // MARK: Subviews
 
+    /// The label which will display a count of the images in `LPThumbnailView` 
     internal lazy var counterLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
