@@ -1,0 +1,6 @@
+framework module LPThumbnailView {
+  umbrella header "LPThumbnailView-umbrella.h"
+
+  export *
+  module * { export * }
+}

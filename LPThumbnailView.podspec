@@ -2,15 +2,15 @@
 Pod::Spec.new do |s|
 
   s.name         = "LPThumbnailView"
-  s.version      = "0.1.0"
-  s.summary      = "A thumbnail view for iOS."
+  s.version      = "1.0.0"
+  s.summary      = "An image thumbnail view for iOS."
 
   s.description  = <<-DESC
-  A thumbnail view for iOS. 
+  A thumbnail view for iOS to give context to multiple images/videos using thumbnails and counter.
                    DESC
 
   s.homepage     = "https://github.com/luispadron/LPThumbnailView"
-  #s.screenshots  = ""
+  s.screenshots  = "https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/.github/thumbnail.png"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 

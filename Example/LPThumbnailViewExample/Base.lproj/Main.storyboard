@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LPThumbnailViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy2-On-Oh6" customClass="LPThumbnailView" customModule="LPThumbnailView">
+                                <rect key="frame" x="239" y="173" width="120" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="T7e-dZ-XwS"/>
+                                    <constraint firstAttribute="height" constant="160" id="zOf-s9-2ub"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awV-FQ-Fif">
+                                <rect key="frame" x="16" y="566" width="125" height="30"/>
+                                <state key="normal" title="Add image normal"/>
+                                <connections>
+                                    <action selector="touched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t83-As-fGn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsG-aD-Tbu">
+                                <rect key="frame" x="230" y="566" width="129" height="30"/>
+                                <state key="normal" title="Add image context">
+                                    <color key="titleColor" red="0.56561248684867427" green="1" blue="0.69264678721498119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchedWithContext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NED-2e-JhI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jQ-lw-5Zl">
+                                <rect key="frame" x="16" y="617" width="101" height="30"/>
+                                <state key="normal" title="Remove image">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.046545039428554702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rds-RL-rBc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-qs-zxD">
+                                <rect key="frame" x="200" y="617" width="159" height="30"/>
+                                <state key="normal" title="Remove image at index">
+                                    <color key="titleColor" red="1" green="0.55185569933953382" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeButtonIndexTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqu-Oc-gdK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="awV-FQ-Fif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7hO-1G-0RP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5jQ-lw-5Zl" secondAttribute="bottom" constant="20" id="Dfi-Za-myo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dBL-qs-zxD" secondAttribute="bottom" constant="20" id="FXH-J5-Bcx"/>
+                            <constraint firstItem="dBL-qs-zxD" firstAttribute="top" secondItem="tsG-aD-Tbu" secondAttribute="bottom" constant="21" id="MoR-3v-ofc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cy2-On-Oh6" secondAttribute="trailing" constant="16" id="N7h-vY-TaE"/>
+                            <constraint firstItem="cy2-On-Oh6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="153" id="Pdm-na-UfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dBL-qs-zxD" secondAttribute="trailing" constant="16" id="ScH-nD-1PV"/>
+                            <constraint firstItem="5jQ-lw-5Zl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aMd-gB-472"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tsG-aD-Tbu" secondAttribute="trailing" constant="16" id="s3S-32-Cys"/>
+                            <constraint firstItem="5jQ-lw-5Zl" firstAttribute="top" secondItem="awV-FQ-Fif" secondAttribute="bottom" constant="21" id="xJ0-5R-c1b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="thumbnailView" destination="cy2-On-Oh6" id="SHf-Yh-ODX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
