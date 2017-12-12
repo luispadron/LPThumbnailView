@@ -163,6 +163,28 @@ open class LPThumbnailView: UIView {
         }
     }
 
+    public func removeImages(_ images: [UIImage], duration: TimeInterval = 0.7) {
+        var displayedImageRemoved: Bool = false
+        for img in images {
+            guard let index = self.images.index(of: img) else { continue }
+            if img == self.images.last {
+                displayedImageRemoved = true
+            }
+            self.images.remove(at: index)
+        }
+
+        self.toggleSelfVisibility()
+        self.toggleCounterView()
+
+        if let img = self.images.last, displayedImageRemoved {
+            // Animate change to new image since image being displayed was removed.
+            self.animateImageRemoval(to: img, duration: duration)
+        } else {
+            // Just animate counter change.
+            self.animateCounterLabel(duration: duration / 2)
+        }
+    }
+
     // MARK: Subviews
 
     private lazy var imageView: LPShadowImageView = {
