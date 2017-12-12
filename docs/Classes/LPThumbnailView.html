@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LPThumbnailView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/LPThumbnailView" class="dashAnchor"></a>
+    <a title="LPThumbnailView Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">LPThumbnailView Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/luispadron/LPThumbnailView"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">LPThumbnailView Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LPThumbnailView Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/LPThumbnailView.html">LPThumbnailView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/LPThumbnailViewAnimationStyle.html">LPThumbnailViewAnimationStyle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LPThumbnailView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">LPThumbnailView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>LPThumbnailView</p>
+
+<p>A thumbnail view for displaying images and give context in an application which takes photos/video thumbnails.
+Simply add to a view controler as a subview.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20members/properties"></a>
+                <a name="//apple_ref/swift/Section/Public members/properties" class="dashAnchor"></a>
+                <a href="#/Public%20members/properties">
+                  <h3 class="section-name">Public members/properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv"></a>
+                    <a name="//apple_ref/swift/Property/images" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The images which the <code>LPThumbnailView</code> will display.</p>
+
+<p>To add images you must call <code>addImage</code> or <code>addImageWithContext</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">images</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIImage</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt">UIImage</span><span class="p">]()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC14imageScaleModeSC013UIViewContentE0Ov"></a>
+                    <a name="//apple_ref/swift/Property/imageScaleMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC14imageScaleModeSC013UIViewContentE0Ov">imageScaleMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The scale mode to use for the <code>imageView</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">imageScaleMode</span><span class="p">:</span> <span class="kt">UIViewContentMode</span> <span class="o">=</span> <span class="o">.</span><span class="n">scaleAspectFill</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC030automaticallyCalculatesCounterB4SizeSbv"></a>
+                    <a name="//apple_ref/swift/Property/automaticallyCalculatesCounterViewSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC030automaticallyCalculatesCounterB4SizeSbv">automaticallyCalculatesCounterViewSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not the size of the counter view should be calculated automatically.</p>
+
+<p>If so, the counter view&rsquo;s size will be a ratio of the <code>LPThumbnailView</code>, otherwise
+<code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC07counterB4Size12CoreGraphics7CGFloatVv">counterViewSize</a></code> will be used as the size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">automaticallyCalculatesCounterViewSize</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB4Size12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB4Size12CoreGraphics7CGFloatVv">counterViewSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The size of counter view and it&rsquo;s label.</p>
+
+<p>Only used when <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC030automaticallyCalculatesCounterB4SizeSbv">automaticallyCalculatesCounterViewSize</a></code> is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewSize</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">50</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB10TopSpacing12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewTopSpacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB10TopSpacing12CoreGraphics7CGFloatVv">counterViewTopSpacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of top spacing from the <code>LPThumbnailView</code> parent view to give to the counter view and label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewTopSpacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">4.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB15TrailingSpacing12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewTrailingSpacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB15TrailingSpacing12CoreGraphics7CGFloatVv">counterViewTrailingSpacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of trailing spacing from the <code>LPThumbnailView</code> parent view to give to the counter view and label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewTrailingSpacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">2.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB5LabelSo7UILabelCv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB5LabelSo7UILabelCv">counterViewLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An accessor for the label which displays the amount of images in the counter view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewLabel</span><span class="p">:</span> <span class="kt">UILabel</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB15BackgroundColorSo7UIColorCv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB15BackgroundColorSo7UIColorCv">counterViewBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color for the counter view which counts the number of images in the view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">cyan</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC14animationStyleAA0ab9AnimationD0Ov"></a>
+                    <a name="//apple_ref/swift/Property/animationStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC14animationStyleAA0ab9AnimationD0Ov">animationStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The animation style used when calling <code>addImage</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">animationStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/LPThumbnailViewAnimationStyle.html">LPThumbnailViewAnimationStyle</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">crossDissolve</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC07counterB16AnimationOptionsSC06UIViewdE0Vv"></a>
+                    <a name="//apple_ref/swift/Property/counterViewAnimationOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC07counterB16AnimationOptionsSC06UIViewdE0Vv">counterViewAnimationOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The animation options used when animating the counter view label change.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">counterViewAnimationOptions</span><span class="p">:</span> <span class="kt">UIViewAnimationOptions</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">transitionFlipFromBottom</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC14hidesWhenEmptySbv"></a>
+                    <a name="//apple_ref/swift/Property/hidesWhenEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC14hidesWhenEmptySbv">hidesWhenEmpty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not this view automatically hides it self when there are no images to display.</p>
+
+<p>This is <code>true</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hidesWhenEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Overrides"></a>
+                <a name="//apple_ref/swift/Section/Overrides" class="dashAnchor"></a>
+                <a href="#/Overrides">
+                  <h3 class="section-name">Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LPThumbnailView@objc(cs)LPThumbnailView(im)initWithFrame:"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LPThumbnailView@objc(cs)LPThumbnailView(im)initWithFrame:">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LPThumbnailView@objc(cs)LPThumbnailView(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LPThumbnailView@objc(cs)LPThumbnailView(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20API"></a>
+                <a name="//apple_ref/swift/Section/Public API" class="dashAnchor"></a>
+                <a href="#/Public%20API">
+                  <h3 class="section-name">Public API</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC8addImageySo7UIImageC_Sd8durationtF"></a>
+                    <a name="//apple_ref/swift/Method/addImage(_:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC8addImageySo7UIImageC_Sd8durationtF">addImage(_:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an image to the <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> array and performs an animation.</p>
+
+<p>Will animate with <code>duration</code> length, if <code>duration = 0</code> will not animate and will just perform changes instantly.
+Animation style performed depends on <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC14animationStyleAA0ab9AnimationD0Ov">animationStyle</a></code> property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to add.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How long to animate for, if this is 0, no animation is performed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC19addImageWithContextySo07UIImageB0C_Sd8durationtF"></a>
+                    <a name="//apple_ref/swift/Method/addImageWithContext(_:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC19addImageWithContextySo07UIImageB0C_Sd8durationtF">addImageWithContext(_:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an image to the <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> array and performs an animation with context.</p>
+
+<p>This animation differs from <code>addImage</code> since it uses a temporary image view that was created outside of this instance.
+It then animates that temporary image view into the correct position and frame and performs an animation to make it look
+like the temporary image view was added to this thumbnail view.</p>
+
+<p>The image from the temporary image view is then used to become the new main thumbail for this view.</p>
+<h2 id='important' class='heading'>Important</h2>
+
+<p><code>tempImageView</code> is removed from it&rsquo;s superview after this function is called</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addImageWithContext</span><span class="p">(</span><span class="n">_</span> <span class="nv">tempImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tempImageView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The temporary image view which will be animated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How long to animate for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC11removeImageySd8duration_tF"></a>
+                    <a name="//apple_ref/swift/Method/removeImage(duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC11removeImageySd8duration_tF">removeImage(duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the <strong>last</strong> image in <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> and performs an animation.</p>
+
+<p><strong>Requires</strong> that there be at least 1 image in the <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeImage</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How long to animate for, if this value is 0, no animation is performed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC11removeImageySi2at_Sd8durationtF"></a>
+                    <a name="//apple_ref/swift/Method/removeImage(at:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC11removeImageySi2at_Sd8durationtF">removeImage(at:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the image in <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> at the specified index and performs an animation.</p>
+
+<p><strong>Requires</strong> that the index is a valid index of <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeImage</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the image to remove.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How long to animate for, if this value is 0, no animation is performed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15LPThumbnailViewAAC12removeImagesySaySo7UIImageCG_Sd8durationtF"></a>
+                    <a name="//apple_ref/swift/Method/removeImages(_:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15LPThumbnailViewAAC12removeImagesySaySo7UIImageCG_Sd8durationtF">removeImages(_:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> sent in from this views <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> array and performs an animation if and only if
+one of the images removed is main thumbnail image of this view.</p>
+
+<p>If any image in <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> is not in this views <code><a href="../Classes/LPThumbnailView.html#/s:15LPThumbnailViewAAC6imagesSaySo7UIImageCGv">images</a></code> the removal is ignored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeImages</span><span class="p">(</span><span class="n">_</span> <span class="nv">images</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIImage</span><span class="p">],</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>images</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The images to remove.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How long to animate for if image removed is currently being displayed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://luispadron.com" target="_blank" rel="external">Luis</a>. All rights reserved. (Last updated: 2017-12-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

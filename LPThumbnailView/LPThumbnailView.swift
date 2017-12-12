@@ -43,6 +43,9 @@ open class LPThumbnailView: UIView {
      */
     public private(set) var images: [UIImage] = [UIImage]()
 
+    /**
+     The scale mode to use for the `imageView`.
+     */
     public var imageScaleMode: UIViewContentMode = .scaleAspectFill {
         didSet { self.imageView.contentMode = self.imageScaleMode }
     }
