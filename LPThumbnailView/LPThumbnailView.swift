@@ -18,7 +18,7 @@ public enum LPThumbnailViewAnimationStyle {
 
 open class LPThumbnailView: UIView {
 
-    // MARK: Members/Properties
+    // MARK: Public members/properties
 
     public private(set) var images: [UIImage] = [UIImage]()
 
@@ -41,15 +41,11 @@ open class LPThumbnailView: UIView {
     }
 
     public var counterViewTopSpacing: CGFloat = 4.0 {
-        didSet {
-            self.counterViewTopConstraint?.constant = self.counterViewTopSpacing
-        }
+        didSet { self.counterViewTopConstraint?.constant = self.counterViewTopSpacing }
     }
 
     public var counterViewTrailingSpacing: CGFloat = 2.0 {
-        didSet {
-            self.counterViewTrailingConstraint?.constant = -self.counterViewTrailingSpacing
-        }
+        didSet { self.counterViewTrailingConstraint?.constant = -self.counterViewTrailingSpacing }
     }
 
     public var counterViewLabel: UILabel {
@@ -60,9 +56,13 @@ open class LPThumbnailView: UIView {
         didSet { self.counterView.backgroundColor = self.counterViewBackgroundColor }
     }
 
-    public var animationStyle: LPThumbnailViewAnimationStyle = .enterFromRight
+    public var animationStyle: LPThumbnailViewAnimationStyle = .crossDissolve
 
     public var counterViewAnimationOptions: UIViewAnimationOptions = [.transitionFlipFromBottom]
+
+    public var hidesWhenEmpty: Bool = true
+
+    // MARK: Private members/properties
 
     private var counterViewTopConstraint: NSLayoutConstraint? = nil
 
@@ -91,6 +91,7 @@ open class LPThumbnailView: UIView {
 
     public func addImage(_ img: UIImage, duration: TimeInterval = 0.4) {
         self.images.append(img)
+        self.toggleSelfVisibility()
         self.toggleCounterView()
         guard duration > 0 else {
             self.imageView.image = img
@@ -103,6 +104,7 @@ open class LPThumbnailView: UIView {
     public func addImageWithContext(_ tempImageView: UIImageView, duration: TimeInterval = 1.0) {
         guard let img = tempImageView.image else { return }
         self.images.append(img)
+        self.toggleSelfVisibility()
         self.toggleCounterView()
         self.animateImageAdditionWithContext(tempImageView, img: img, duration: duration)
     }
@@ -115,6 +117,7 @@ open class LPThumbnailView: UIView {
         self.addSubview(imageView)
         self.addSubview(counterView)
         self.createConstraints()
+        self.isHidden = self.hidesWhenEmpty
     }
 
     private func createConstraints() {
@@ -172,35 +175,62 @@ open class LPThumbnailView: UIView {
     }
 
     private func animateImageAddition(_ img: UIImage, duration: TimeInterval) {
-        let tempImgView = createTemporaryImageView(with: img)
-        self.insertSubview(tempImgView, at: 0)
+        // If cross disolve dont perform frame animation changes
+        switch self.animationStyle {
+        case .crossDissolve:
+            UIView.animateKeyframes(withDuration: duration,
+                                    delay: 0.0,
+                                    options: [],
+                                    animations: {
+                                        UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/2) {
+                                            self.imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                                            self.animateImageChange(to: img, duration: duration * (1/2))
+                                        }
 
-        UIView.animateKeyframes(withDuration: duration,
-                                delay: 0.0,
-                                options: [],
-                                animations: {
-                                    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3) {
-                                        tempImgView.frame = CGRect(x: self.imageView.frame.origin.x,
-                                                                   y: self.imageView.frame.origin.y,
-                                                                   width: tempImgView.frame.width,
-                                                                   height: tempImgView.frame.height)
-                                    }
-                                    UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3) {
-                                        self.imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-                                        self.animateImageChange(to: img, duration: duration * (1/3))
-                                        tempImgView.alpha = 0.0
-                                    }
+                                        UIView.addKeyframe(withRelativeStartTime: 1/2, relativeDuration: 1/2) {
+                                            self.animateCounterLabel(duration: duration * (1/2))
+                                            self.imageView.transform = CGAffineTransform.identity
+                                        }
+                                    },
+                                    completion: nil
+            )
+        case .enterFromBottom: fallthrough
+        case .enterFromTop: fallthrough
+        case .enterFromLeft: fallthrough
+        case .enterFromRight:
+            // Add a temp image view and move it to the actual image view position
+            let tempImgView = createTemporaryImageView(with: img)
+            self.insertSubview(tempImgView, at: 0)
+            // Animate move, scale and counter label change
+            UIView.animateKeyframes(withDuration: duration,
+                                    delay: 0.0,
+                                    options: [],
+                                    animations: {
+                                        UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3) {
+                                            tempImgView.frame = CGRect(x: self.imageView.frame.origin.x,
+                                                                       y: self.imageView.frame.origin.y,
+                                                                       width: tempImgView.frame.width,
+                                                                       height: tempImgView.frame.height)
+                                        }
 
-                                    UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
-                                        self.animateCounterLabel(duration: duration * (1/3))
-                                        self.imageView.transform = CGAffineTransform.identity
+                                        UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3) {
+                                            self.imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                                            self.animateImageChange(to: img, duration: duration * (1/3))
+                                            tempImgView.alpha = 0.0
+                                        }
+
+                                        UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3) {
+                                            self.animateCounterLabel(duration: duration * (1/3))
+                                            self.imageView.transform = CGAffineTransform.identity
+                                        }
+                                    },
+                                    completion: { _ in
+                                        // Remove temp image view
+                                        tempImgView.removeFromSuperview()
                                     }
-                                },
-                                completion: { _ in
-                                    // Remove temp image view
-                                    tempImgView.removeFromSuperview()
-                                }
-        )
+            )
+
+        }
     }
 
     private func animateImageAdditionWithContext(_ tempImageView: UIImageView, img: UIImage, duration: TimeInterval) {
@@ -249,6 +279,15 @@ open class LPThumbnailView: UIView {
                           animations: { self.counterViewLabel.text = "\(self.images.count)" },
                           completion: nil
         )
+    }
+
+    private func toggleSelfVisibility() {
+        guard self.hidesWhenEmpty else { return }
+        UIView.animate(withDuration: 0.2, animations: {
+            self.alpha = self.images.count == 0 ? 0.0 : 1.0
+        }, completion: { _ in
+            self.isHidden = self.images.count == 0
+        })
     }
 
     private func toggleCounterView() {
