@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author             = { "Luis Padron" => "heyluispadron@gmail.com" }
   s.social_media_url   = "https://luispadron.com"
 
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/luispadron/LPThumbnailView.git", :tag => "v#{s.version}" }
 
   s.source_files  = "LPThumbnailView", "LPThumbnailView/**/*.{h,m}"
