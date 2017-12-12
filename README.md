@@ -15,6 +15,10 @@
 - Customizeable
 - Written in the latest Swift
 
+## Requires
+
+- iOS 10.0+
+
 ## Installation
 
 ### CocoaPods
