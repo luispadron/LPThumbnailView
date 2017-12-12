@@ -13,7 +13,7 @@ import UIKit
 
  A circular view with a label, used inside of `LPThumbnailView`.
  */
-internal class LPThumbnailCounterView: UIView {
+internal class LPThumbnailCounterView: LPShadowView {
     // MARK: Override
 
     /// Overriden init
@@ -37,13 +37,16 @@ internal class LPThumbnailCounterView: UIView {
     // MARK: Helpers
 
     /// Helper function to initialize the view
-    private func initialize() {
+    internal override func initialize() {
+        // Set shadow properties
+        self.normalShadowRadius = 2
+        self.normalShadowOpactiy = 0.4
+        self.touchedShadowRadius = 1
+        self.touchedShadowOpacity = 0.2
+        self.setShadowTo(.normal, duration: 0.0)
+        // Constraint setup
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = self.bounds.width / 2
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 2
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
         // Add constraints for label
         self.addSubview(counterLabel)
         self.counterLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true

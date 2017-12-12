@@ -9,24 +9,6 @@
 import UIKit
 
 /**
- LPThumbnailViewAnimationStyle
-
- Enum for determining the type of animation to use when calling `addImage(_:duration:)`.
- */
-public enum LPThumbnailViewAnimationStyle {
-    /// Animation which shows a temporary image entering from the right of `LPThumbnailView` then fades into the actual view.
-    case enterFromRight
-    /// Animation which shows a temporary image entering from the left of `LPThumbnailView` then fades into the actual view.
-    case enterFromLeft
-    /// Animation which shows a temporary image entering from the top of `LPThumbnailView` then fades into the actual view.
-    case enterFromTop
-    /// Animation which shows a temporary image entering from underneath of `LPThumbnailView` then fades into the actual view.
-    case enterFromBottom
-    /// Simply cross dissolves from the old image to the image animating to.
-    case crossDissolve
-}
-
-/**
  LPThumbnailView
 
  A thumbnail view for displaying images and give context in an application which takes photos/video thumbnails.
@@ -35,6 +17,11 @@ public enum LPThumbnailViewAnimationStyle {
 open class LPThumbnailView: UIView {
 
     // MARK: Public members/properties
+
+    /**
+     The delegate responsible for listening to touches/updates propogated from this view.
+     */
+    public weak var delegate: LPThumbnailViewDelegate? = nil
 
     /**
      The images which the `LPThumbnailView` will display.
@@ -324,8 +311,7 @@ private extension LPThumbnailView {
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(self.viewWasTapped(_:)))
-        gesture.minimumPressDuration = 0
-        gesture.allowableMovement = 5
+        gesture.minimumPressDuration = 0.05
         self.addGestureRecognizer(gesture)
         self.addSubview(imageView)
         self.addSubview(counterView)
@@ -419,35 +405,27 @@ private extension LPThumbnailView {
         }
     }
 
-    /// Called whenever the view is tapped
-    @objc private func viewWasTapped(_ recognizer: UITapGestureRecognizer) {
+    /// Called whenever the view is tapped, animates the view and calls the view delegate.
+    @objc private func viewWasTapped(_ recognizer: UILongPressGestureRecognizer) {
         switch recognizer.state {
         case .began:
-            print("Touches began")
-            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
+            if animator.isRunning { animator.stopAnimation(true) }
             animator.addAnimations {
                 self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
                 self.imageView.setShadowTo(.touched, duration: 0.4)
-            }
-            animator.startAnimation()
-
-        case .cancelled:
-            print("Touches cancelled")
-            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
-            animator.addAnimations {
-                self.transform = CGAffineTransform.identity
-                self.imageView.setShadowTo(.normal, duration: 0.4)
+                self.counterView.setShadowTo(.touched, duration: 0.4)
             }
             animator.startAnimation()
 
         case .ended:
-            print("Touches ended")
-            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
+            if animator.isRunning { animator.stopAnimation(true) }
             animator.addAnimations {
                 self.transform = CGAffineTransform.identity
                 self.imageView.setShadowTo(.normal, duration: 0.4)
+                self.counterView.setShadowTo(.normal, duration: 0.4)
             }
             animator.startAnimation()
+            self.delegate?.thumbnailViewWasTapped(self)
 
         default: break
         }

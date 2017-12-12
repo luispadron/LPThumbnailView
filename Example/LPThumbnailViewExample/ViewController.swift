@@ -9,7 +9,7 @@
 import UIKit
 import LPThumbnailView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LPThumbnailViewDelegate {
 
     var touchCount = 0
 
@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set delegate
+        self.thumbnailView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,5 +73,9 @@ class ViewController: UIViewController {
             }
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+
+    func thumbnailViewWasTapped(_ view: LPThumbnailView) {
+        print("Thumbnail tapped!")
     }
 }

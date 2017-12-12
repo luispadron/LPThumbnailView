@@ -13,6 +13,9 @@
 		A08A6F0E1FDB95F200A111E2 /* LPThumbnailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A6F0D1FDB95F200A111E2 /* LPThumbnailViewTests.swift */; };
 		A08A6F101FDB95F200A111E2 /* LPThumbnailView.h in Headers */ = {isa = PBXBuildFile; fileRef = A08A6F021FDB95F100A111E2 /* LPThumbnailView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A08A6F1A1FDB97F600A111E2 /* LPThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A6F191FDB97F600A111E2 /* LPThumbnailView.swift */; };
+		A0C2426B1FE07E6D006EC771 /* LPShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C2426A1FE07E6D006EC771 /* LPShadowView.swift */; };
+		A0C2426D1FE0826F006EC771 /* LPThumbnailViewAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C2426C1FE0826F006EC771 /* LPThumbnailViewAnimationStyle.swift */; };
+		A0C2426F1FE08282006EC771 /* LPThumbnailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C2426E1FE08282006EC771 /* LPThumbnailViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		A08A6F0D1FDB95F200A111E2 /* LPThumbnailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPThumbnailViewTests.swift; sourceTree = "<group>"; };
 		A08A6F0F1FDB95F200A111E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08A6F191FDB97F600A111E2 /* LPThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPThumbnailView.swift; sourceTree = "<group>"; };
+		A0C2426A1FE07E6D006EC771 /* LPShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPShadowView.swift; sourceTree = "<group>"; };
+		A0C2426C1FE0826F006EC771 /* LPThumbnailViewAnimationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPThumbnailViewAnimationStyle.swift; sourceTree = "<group>"; };
+		A0C2426E1FE08282006EC771 /* LPThumbnailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPThumbnailViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				A08A6F191FDB97F600A111E2 /* LPThumbnailView.swift */,
 				A01A5E481FDBA68E00A963AE /* LPThumbnailCounterView.swift */,
 				A01A5E4A1FDBADA900A963AE /* LPShadowImageView.swift */,
+				A0C2426A1FE07E6D006EC771 /* LPShadowView.swift */,
+				A0C2426C1FE0826F006EC771 /* LPThumbnailViewAnimationStyle.swift */,
+				A0C2426E1FE08282006EC771 /* LPThumbnailViewDelegate.swift */,
 			);
 			path = LPThumbnailView;
 			sourceTree = "<group>";
@@ -208,6 +217,9 @@
 			files = (
 				A01A5E491FDBA68E00A963AE /* LPThumbnailCounterView.swift in Sources */,
 				A08A6F1A1FDB97F600A111E2 /* LPThumbnailView.swift in Sources */,
+				A0C2426F1FE08282006EC771 /* LPThumbnailViewDelegate.swift in Sources */,
+				A0C2426D1FE0826F006EC771 /* LPThumbnailViewAnimationStyle.swift in Sources */,
+				A0C2426B1FE07E6D006EC771 /* LPShadowView.swift in Sources */,
 				A01A5E4B1FDBADA900A963AE /* LPShadowImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
