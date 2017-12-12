@@ -294,6 +294,7 @@ open class LPThumbnailView: UIView {
         let view = LPShadowImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = self.imageScaleMode
+        view.isUserInteractionEnabled = false
         return view
     }()
 
@@ -302,7 +303,15 @@ open class LPThumbnailView: UIView {
         let counterView = LPThumbnailCounterView()
         counterView.backgroundColor = self.counterViewBackgroundColor
         counterView.isHidden = true
+        counterView.isUserInteractionEnabled = false
         return counterView
+    }()
+
+    /// A property animator for animating this view whenever the view is tapped.
+    private lazy var animator: UIViewPropertyAnimator = {
+        let animator = UIViewPropertyAnimator(duration: 0.4, dampingRatio: 0.6, animations: nil)
+        animator.isInterruptible = true
+        return animator
     }()
 }
 
@@ -314,6 +323,10 @@ private extension LPThumbnailView {
     private func initialize() {
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(self.viewWasTapped(_:)))
+        gesture.minimumPressDuration = 0
+        gesture.allowableMovement = 5
+        self.addGestureRecognizer(gesture)
         self.addSubview(imageView)
         self.addSubview(counterView)
         self.createConstraints()
@@ -403,6 +416,40 @@ private extension LPThumbnailView {
         self.counterView.isHidden = false
         UIView.animate(withDuration: 0.2) {
             self.counterView.alpha = 1.0
+        }
+    }
+
+    /// Called whenever the view is tapped
+    @objc private func viewWasTapped(_ recognizer: UITapGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            print("Touches began")
+            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
+            animator.addAnimations {
+                self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                self.imageView.setShadowTo(.touched, duration: 0.4)
+            }
+            animator.startAnimation()
+
+        case .cancelled:
+            print("Touches cancelled")
+            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
+            animator.addAnimations {
+                self.transform = CGAffineTransform.identity
+                self.imageView.setShadowTo(.normal, duration: 0.4)
+            }
+            animator.startAnimation()
+
+        case .ended:
+            print("Touches ended")
+            if animator.isRunning { print("stopping animation");animator.stopAnimation(true) }
+            animator.addAnimations {
+                self.transform = CGAffineTransform.identity
+                self.imageView.setShadowTo(.normal, duration: 0.4)
+            }
+            animator.startAnimation()
+
+        default: break
         }
     }
 }
