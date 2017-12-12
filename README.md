@@ -78,3 +78,7 @@ thumbnailView.addImageWithContext(imgView)
 ## Documentation
 
 Please read the docs [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/docs/Classes/LPThumbnailView.html) for more information and before posting an issue.
+
+## Example Project
+
+Take a look at the example project [here](https://github.com/luispadron/LPThumbnailView/tree/master/Example) 
