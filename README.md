@@ -28,10 +28,9 @@
 
 	```ruby
 	target 'Example' do
-		# IMPORTANT: Make sure use_frameworks! is included at the top of the file
-    use_frameworks!
-
-		pod 'LPThumbnailView'
+	    # IMPORTANT: Make sure use_frameworks! is included at the top of the file
+	    use_frameworks!
+	    pod 'LPThumbnailView'
 	end
 	```
 3. Run `pod install`
