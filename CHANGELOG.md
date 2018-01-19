@@ -1,3 +1,7 @@
+## Version 1.1.1
+
+- Fix bug with `deleteAtIndex`
+
 ## Version 1.1.0
 
   - Add tap listener for the view and animation on tap
@@ -7,7 +11,7 @@
   - Increase requirement to iOS 10.0 since using `UIViewPropretyAnimator`
   - Add missing documentation and new docs for
   - Add new `LPThumbnailViewDelegate` to allow user to listen for taps in view and action on them.
-  
+
 ## Version 1.0.0
 
 Initial release

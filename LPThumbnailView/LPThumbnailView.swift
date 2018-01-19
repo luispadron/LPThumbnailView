@@ -226,7 +226,7 @@ open class LPThumbnailView: UIView {
         - duration: How long to animate for, if this value is 0, no animation is performed.
      */
     public func removeImage(at index: Int, duration: TimeInterval = 0.7) {
-        if index != self.images.count - 1, duration == 0 {
+        if index != self.images.count - 1 || duration == 0 {
             // The image being removed isn't the one being displayed so we can just remove it with no animation.
             self.images.remove(at: index)
             self.toggleCounterView()
