@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LPThumbnailView"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "An image thumbnail view for iOS."
 
   s.description  = <<-DESC

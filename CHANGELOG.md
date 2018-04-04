@@ -1,3 +1,7 @@
+## Version 1.1.2
+
+- Build with Swift 4.1
+
 ## Version 1.1.1
 
 - Fix bug with `deleteAtIndex`
