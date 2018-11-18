@@ -3,106 +3,213 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06E4A85043B966A787A1A47B57465C9B /* LPThumbnailView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F71892F308F04BAD03A1A806D797358 /* LPThumbnailView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22F65AEC319794B4F17F23C18310D782 /* LPThumbnailView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC309A131EC6CC71605C38A61340537 /* LPThumbnailView-dummy.m */; };
-		37C992F91D78C348B5CD9794BA182CCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3A321C1EE329BE607D131288990309AE /* LPThumbnailCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8B7D585AC2EE98F2283C493138EC9 /* LPThumbnailCounterView.swift */; };
-		5FB78A3508F46424A7312C4D144189E2 /* Pods-LPThumbnailViewExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC6369B210057C4B6BA410F277DD7CDA /* Pods-LPThumbnailViewExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B20FD9879DEF6D23DBB4AAFC26BB5A4 /* Pods-LPThumbnailViewExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5209332A672CD0F1B7DB084860E0E5 /* Pods-LPThumbnailViewExample-dummy.m */; };
-		7CD168D89518EC222E3DE7876CE9F3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		88F2C9C83B2B0644B3A174B6BF2432A8 /* LPShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9480CB71ADFD1F6F56987187125EC /* LPShadowImageView.swift */; };
-		8BF4BC39F483D258D7A090C26428885E /* LPThumbnailView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1464B8ADFEE9075C0BF94E6762DD6B59 /* LPThumbnailView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E4C2BBABAD25AE64BA3991205533095 /* LPShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE30EF9D6C4C6D2E982CC372F006B6 /* LPShadowView.swift */; };
-		BC0F6E3D1FDAFCA6D4F634532340CE00 /* LPThumbnailViewAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF5EBA53CBDFBAE42A3E79B2D0440 /* LPThumbnailViewAnimationStyle.swift */; };
-		CF5D41CF3817D3F836F7DC99849EC7DF /* LPThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B805A2042ACAB5052A61B5EBCC82 /* LPThumbnailView.swift */; };
-		E666AE340503149474A7F990A77C7031 /* LPThumbnailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC92C920F9D7BBBDEC7C9CE12E15163 /* LPThumbnailViewDelegate.swift */; };
+		06A6AEFC3B392376F20FB7E62075CF76 /* LPThumbnailView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742E45277BAADC01977A31F7873680F /* LPThumbnailView-dummy.m */; };
+		16A7AD09C4D9A156FD736D4B35DC0D42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		21896BEF874920371CEDBC6552EE8380 /* Pods-LPThumbnailViewExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3DA5FDD17636AFF5612F691F64DF77 /* Pods-LPThumbnailViewExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		356DDE629D91EB08A5C059591E4EEAB3 /* LPShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3666ACEBB14B20F319F1CC6A2A90EB /* LPShadowView.swift */; };
+		56D35C4ECECF55B51AD25182E251C779 /* LPThumbnailView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A57A44252F44D107B66B933D5E3802F8 /* LPThumbnailView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E01C786F164646808CB8919F784F395 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		63DF46A7AC8C70186136C8272D91C71A /* Pods-LPThumbnailViewExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F0B62C86D9ACBA3C7E63DC32F10B /* Pods-LPThumbnailViewExample-dummy.m */; };
+		68B67A9ECF5E47134146EF1B716F04C0 /* LPThumbnailViewAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFAF493CDE4550F27029F88D0030BC /* LPThumbnailViewAnimationStyle.swift */; };
+		93F991C639EA80DCDC29306FF13FAA26 /* LPThumbnailCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C4684395B8323F058AA30C9A2E270 /* LPThumbnailCounterView.swift */; };
+		9F5AF734E622E2A15F0642FAB3C3443D /* LPThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E618380369AD334A77467BE71FAA2386 /* LPThumbnailView.swift */; };
+		A22EC5C0368B6D1581B3412A680875B7 /* LPThumbnailView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0449AA33796F8DDCA45C176FEE6B524 /* LPThumbnailView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9CA6B57B4568D6F5C9910D048A19E5 /* LPThumbnailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98617C4C44865F6B3AB638BF2F0D6FAC /* LPThumbnailViewDelegate.swift */; };
+		FCD288159FFB86EECA261746C048BDBA /* LPShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681CC0684DFE1E45850FCC7D9692FF3 /* LPShadowImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7C227ECD8E68C4ADD57350B31050668 /* PBXContainerItemProxy */ = {
+		11F5DC98A14010DA1C12423A686EF516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4545B4523332A71480D6D0E6F72CC8C8;
+			remoteGlobalIDString = C24F462D4A36A0D3337E5B7EA16A840C;
 			remoteInfo = LPThumbnailView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03AD00C932C189F464C5D3F85DD30932 /* Pods-LPThumbnailViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LPThumbnailViewExample.debug.xcconfig"; sourceTree = "<group>"; };
-		0F71892F308F04BAD03A1A806D797358 /* LPThumbnailView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPThumbnailView-umbrella.h"; sourceTree = "<group>"; };
-		1464B8ADFEE9075C0BF94E6762DD6B59 /* LPThumbnailView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPThumbnailView.h; path = LPThumbnailView/LPThumbnailView.h; sourceTree = "<group>"; };
-		1D4E1B5FD455D0A8086A809DEA7B8317 /* Pods-LPThumbnailViewExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LPThumbnailViewExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		1EC92C920F9D7BBBDEC7C9CE12E15163 /* LPThumbnailViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailViewDelegate.swift; path = LPThumbnailView/LPThumbnailViewDelegate.swift; sourceTree = "<group>"; };
-		21855D541B0FF2BFFE8C9F1185B6F78A /* LPThumbnailView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LPThumbnailView.xcconfig; sourceTree = "<group>"; };
-		2FAC52A209AE87F0B94636886D6510CB /* Pods_LPThumbnailViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPThumbnailViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		36B858C35C7706EAC7A7CE90A589B0DE /* LPThumbnailView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LPThumbnailView.modulemap; sourceTree = "<group>"; };
-		4239ECBAB0A5FF89CA59E8893CFE7D99 /* Pods-LPThumbnailViewExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LPThumbnailViewExample.modulemap"; sourceTree = "<group>"; };
-		5C2C5E9E476CC97745E84092B3E2BD42 /* Pods-LPThumbnailViewExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LPThumbnailViewExample-frameworks.sh"; sourceTree = "<group>"; };
-		5CA60B1A9FACF29F28BEDEE94A35AF26 /* LPThumbnailView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPThumbnailView-prefix.pch"; sourceTree = "<group>"; };
-		60ACF5EBA53CBDFBAE42A3E79B2D0440 /* LPThumbnailViewAnimationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailViewAnimationStyle.swift; path = LPThumbnailView/LPThumbnailViewAnimationStyle.swift; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6DB9480CB71ADFD1F6F56987187125EC /* LPShadowImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPShadowImageView.swift; path = LPThumbnailView/LPShadowImageView.swift; sourceTree = "<group>"; };
-		70A60C35148D2FB55B4E3A05B5D48DD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BA8B7D585AC2EE98F2283C493138EC9 /* LPThumbnailCounterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailCounterView.swift; path = LPThumbnailView/LPThumbnailCounterView.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A6909DB88EA9E64A776CCC1DD65F571B /* Pods-LPThumbnailViewExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LPThumbnailViewExample-resources.sh"; sourceTree = "<group>"; };
-		A6E2B805A2042ACAB5052A61B5EBCC82 /* LPThumbnailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailView.swift; path = LPThumbnailView/LPThumbnailView.swift; sourceTree = "<group>"; };
-		AA5209332A672CD0F1B7DB084860E0E5 /* Pods-LPThumbnailViewExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LPThumbnailViewExample-dummy.m"; sourceTree = "<group>"; };
-		ABC309A131EC6CC71605C38A61340537 /* LPThumbnailView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LPThumbnailView-dummy.m"; sourceTree = "<group>"; };
-		D1B13AAB9B6992EB8DCDBC1E1804EA14 /* Pods-LPThumbnailViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LPThumbnailViewExample.release.xcconfig"; sourceTree = "<group>"; };
-		D9DE30EF9D6C4C6D2E982CC372F006B6 /* LPShadowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPShadowView.swift; path = LPThumbnailView/LPShadowView.swift; sourceTree = "<group>"; };
-		DC6369B210057C4B6BA410F277DD7CDA /* Pods-LPThumbnailViewExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LPThumbnailViewExample-umbrella.h"; sourceTree = "<group>"; };
-		DCB83FB411E8594BAF93AB914B017604 /* Pods-LPThumbnailViewExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LPThumbnailViewExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0DD6D28EAF1B19275A612DE4458101D /* LPThumbnailView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LPThumbnailView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F554A9063EE62FD023840142D23C5D23 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A87F0B62C86D9ACBA3C7E63DC32F10B /* Pods-LPThumbnailViewExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LPThumbnailViewExample-dummy.m"; sourceTree = "<group>"; };
+		0C1C6AA7CF64EC1BDC81111C45C489FA /* LPThumbnailView.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailView.tgz; path = docs/docsets/LPThumbnailView.tgz; sourceTree = "<group>"; };
+		0CC51C3FC0F02F5B368FD44A435623C3 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		0D1F77FA8E9E6E5620A158A2E6AF3F2D /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		0EF037C61442E896EB34FE4F711F80A9 /* Pods-LPThumbnailViewExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LPThumbnailViewExample-frameworks.sh"; sourceTree = "<group>"; };
+		10FFA412E82AFDAA4FF982A5D2CB93E2 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		13F82FD976E46D92E21EBD7F2513B031 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
+		1515899D427513467D9ED95FF3E3CE48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF2FD210E9AC21A5DFAC811B9E677CF /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		1FEF6E64F534A8E6D30D846B0D750B6C /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
+		239520E62AA19D5A55F01C5F3AD4CA97 /* LPThumbnailView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailView.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Classes/LPThumbnailView.html; sourceTree = "<group>"; };
+		286F33A00A02BBDF9047414289FD44F7 /* LPThumbnailViewDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailViewDelegate.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Protocols/LPThumbnailViewDelegate.html; sourceTree = "<group>"; };
+		299EFCE683FBCF079946F94860C8C293 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		2FAC52A209AE87F0B94636886D6510CB /* Pods_LPThumbnailViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LPThumbnailViewExample.framework; path = "Pods-LPThumbnailViewExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B4F2D10194487B4F2B92A26821FFD2 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		3199843DE28C19AABEA5BECD68BE8F13 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
+		3203B5EDDEF997197219C1C578028E62 /* Pods-LPThumbnailViewExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LPThumbnailViewExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		362A3737D2713E669D6A2BFAFE65ED38 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		377726A68237FB4A312F7496C08E05E0 /* Pods-LPThumbnailViewExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LPThumbnailViewExample.modulemap"; sourceTree = "<group>"; };
+		3C6E9DB2B54B2A0EC344D065BDDF9914 /* Pods-LPThumbnailViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LPThumbnailViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		3D3666ACEBB14B20F319F1CC6A2A90EB /* LPShadowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPShadowView.swift; path = src/LPThumbnailView/LPShadowView.swift; sourceTree = "<group>"; };
+		3F6EC58840C74B101FB63B9A1D87CB75 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/Enums.html; sourceTree = "<group>"; };
+		3FB5EB5D32CC6BB447BA545C6FF09631 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5742E45277BAADC01977A31F7873680F /* LPThumbnailView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LPThumbnailView-dummy.m"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A5CE212F05752C9655383E8168925E7 /* Pods-LPThumbnailViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LPThumbnailViewExample.release.xcconfig"; sourceTree = "<group>"; };
+		5BC91B2C35D2E022376B787C46444889 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		5F3DA5FDD17636AFF5612F691F64DF77 /* Pods-LPThumbnailViewExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LPThumbnailViewExample-umbrella.h"; sourceTree = "<group>"; };
+		630AF014F17B5190AB5DBCDBF55B3A2A /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
+		649A64EA96DF88975DAA0F8F1DAAFBBE /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		675712FF5589523263529AC829B6CE2A /* LPThumbnailView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LPThumbnailView.xcconfig; sourceTree = "<group>"; };
+		7511E3890179FE5FB97C595730592BCC /* Pods-LPThumbnailViewExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LPThumbnailViewExample-resources.sh"; sourceTree = "<group>"; };
+		76E9C62579BC001941DA15CD3C490C22 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		7839F05F9889D1D2596463792B51F32B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7F8BC1F9B268F96F69F164EADECE748B /* LPThumbnailViewDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailViewDelegate.html; path = docs/Protocols/LPThumbnailViewDelegate.html; sourceTree = "<group>"; };
+		828DAC0C1A611B4F4FC9842E2FE685B1 /* LPThumbnailViewAnimationStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailViewAnimationStyle.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Enums/LPThumbnailViewAnimationStyle.html; sourceTree = "<group>"; };
+		8EC04AEF4AE83A6B06CB5835C91E4021 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		9146BB1EAD83338945D6976DA2C86C79 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9681CC0684DFE1E45850FCC7D9692FF3 /* LPShadowImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPShadowImageView.swift; path = src/LPThumbnailView/LPShadowImageView.swift; sourceTree = "<group>"; };
+		98617C4C44865F6B3AB638BF2F0D6FAC /* LPThumbnailViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailViewDelegate.swift; path = src/LPThumbnailView/LPThumbnailViewDelegate.swift; sourceTree = "<group>"; };
+		9B703AC218F89119FD27C80172028694 /* LPThumbnailView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailView.html; path = docs/Classes/LPThumbnailView.html; sourceTree = "<group>"; };
+		9C505F67639448DEA14BC3F243D0FBDF /* LPThumbnailView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LPThumbnailView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A15AE97429806FDEC174435A31715BF2 /* LPThumbnailViewAnimationStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = LPThumbnailViewAnimationStyle.html; path = docs/Enums/LPThumbnailViewAnimationStyle.html; sourceTree = "<group>"; };
+		A57A44252F44D107B66B933D5E3802F8 /* LPThumbnailView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPThumbnailView-umbrella.h"; sourceTree = "<group>"; };
+		A73AAB5D29F5B850062FCA6D01ACEBC9 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		AE3EF0D6DB9CB09336A48995CA71B01D /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		AEBD5D11EBCEC1F31F9FE11C74ACF559 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		B0FFAF493CDE4550F27029F88D0030BC /* LPThumbnailViewAnimationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailViewAnimationStyle.swift; path = src/LPThumbnailView/LPThumbnailViewAnimationStyle.swift; sourceTree = "<group>"; };
+		B883C8DF0243B2161D0A2E080D86AA2E /* Pods-LPThumbnailViewExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LPThumbnailViewExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8A87C3DC743846252F2693C66E1C1E0 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		BB7D12A67E4B62D4B0400BFB13B1A6A9 /* LPThumbnailView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPThumbnailView-prefix.pch"; sourceTree = "<group>"; };
+		BD61EA567EB6B30E74C29A1D5E61FF88 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		C0449AA33796F8DDCA45C176FEE6B524 /* LPThumbnailView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPThumbnailView.h; path = src/LPThumbnailView/LPThumbnailView.h; sourceTree = "<group>"; };
+		C19C4684395B8323F058AA30C9A2E270 /* LPThumbnailCounterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailCounterView.swift; path = src/LPThumbnailView/LPThumbnailCounterView.swift; sourceTree = "<group>"; };
+		CA683E69B4FA3D5AAE1DB93080F3733B /* LPThumbnailView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LPThumbnailView.modulemap; sourceTree = "<group>"; };
+		CB8EDECFB68451C4E745A6E1BE8CA899 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		D86C41D35970BDCE4567B6432403712C /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
+		E4EEB8474693634249D57B873B33C40E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E5CA49C3615ACD83D9C12448AE9315AF /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
+		E618380369AD334A77467BE71FAA2386 /* LPThumbnailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPThumbnailView.swift; path = src/LPThumbnailView/LPThumbnailView.swift; sourceTree = "<group>"; };
+		E6AB8A79E503F3821F14456BF25F9B46 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/LPThumbnailView.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		E8E986FB7B62FFD2ED064149C8C45BFF /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		F0DD6D28EAF1B19275A612DE4458101D /* LPThumbnailView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LPThumbnailView.framework; path = LPThumbnailView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9565D975F745A9E4619AAC8F07DDF34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/LPThumbnailView.docset/Contents/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		84EB176F53E4CF8F5E516BEAC036F509 /* Frameworks */ = {
+		5D2D383CF52C51A65F1675B246F5BBFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD168D89518EC222E3DE7876CE9F3BF /* Foundation.framework in Frameworks */,
+				5E01C786F164646808CB8919F784F395 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90789E89BA533FD915FE122B29AB4AE1 /* Frameworks */ = {
+		601FB2E1C4FC08906DE32392CCA76655 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37C992F91D78C348B5CD9794BA182CCE /* Foundation.framework in Frameworks */,
+				16A7AD09C4D9A156FD736D4B35DC0D42 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		652BCC0C9CF7AB8141E46E4AF9851C95 /* LPThumbnailView */ = {
+		26EFF61F079D046183502C193A7EA403 /* Pods-LPThumbnailViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				6DB9480CB71ADFD1F6F56987187125EC /* LPShadowImageView.swift */,
-				D9DE30EF9D6C4C6D2E982CC372F006B6 /* LPShadowView.swift */,
-				7BA8B7D585AC2EE98F2283C493138EC9 /* LPThumbnailCounterView.swift */,
-				1464B8ADFEE9075C0BF94E6762DD6B59 /* LPThumbnailView.h */,
-				A6E2B805A2042ACAB5052A61B5EBCC82 /* LPThumbnailView.swift */,
-				60ACF5EBA53CBDFBAE42A3E79B2D0440 /* LPThumbnailViewAnimationStyle.swift */,
-				1EC92C920F9D7BBBDEC7C9CE12E15163 /* LPThumbnailViewDelegate.swift */,
-				F013674640B8582A54BBAF2DB98D09AB /* Support Files */,
+				3FB5EB5D32CC6BB447BA545C6FF09631 /* Info.plist */,
+				377726A68237FB4A312F7496C08E05E0 /* Pods-LPThumbnailViewExample.modulemap */,
+				B883C8DF0243B2161D0A2E080D86AA2E /* Pods-LPThumbnailViewExample-acknowledgements.markdown */,
+				3203B5EDDEF997197219C1C578028E62 /* Pods-LPThumbnailViewExample-acknowledgements.plist */,
+				0A87F0B62C86D9ACBA3C7E63DC32F10B /* Pods-LPThumbnailViewExample-dummy.m */,
+				0EF037C61442E896EB34FE4F711F80A9 /* Pods-LPThumbnailViewExample-frameworks.sh */,
+				7511E3890179FE5FB97C595730592BCC /* Pods-LPThumbnailViewExample-resources.sh */,
+				5F3DA5FDD17636AFF5612F691F64DF77 /* Pods-LPThumbnailViewExample-umbrella.h */,
+				3C6E9DB2B54B2A0EC344D065BDDF9914 /* Pods-LPThumbnailViewExample.debug.xcconfig */,
+				5A5CE212F05752C9655383E8168925E7 /* Pods-LPThumbnailViewExample.release.xcconfig */,
 			);
-			name = LPThumbnailView;
-			path = /Users/luis/Programming/iOS/LPThumbnailView;
-			sourceTree = "<absolute>";
+			name = "Pods-LPThumbnailViewExample";
+			path = "Target Support Files/Pods-LPThumbnailViewExample";
+			sourceTree = "<group>";
+		};
+		3244A8B6A21BB82DC793B585F82CA912 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				76E9C62579BC001941DA15CD3C490C22 /* badge.svg */,
+				E8E986FB7B62FFD2ED064149C8C45BFF /* carat.png */,
+				9146BB1EAD83338945D6976DA2C86C79 /* carat.png */,
+				E6AB8A79E503F3821F14456BF25F9B46 /* Classes.html */,
+				299EFCE683FBCF079946F94860C8C293 /* Classes.html */,
+				A73AAB5D29F5B850062FCA6D01ACEBC9 /* dash.png */,
+				1FEF6E64F534A8E6D30D846B0D750B6C /* dash.png */,
+				0D1F77FA8E9E6E5620A158A2E6AF3F2D /* docSet.dsidx */,
+				3F6EC58840C74B101FB63B9A1D87CB75 /* Enums.html */,
+				D86C41D35970BDCE4567B6432403712C /* Enums.html */,
+				B8A87C3DC743846252F2693C66E1C1E0 /* gh.png */,
+				1BF2FD210E9AC21A5DFAC811B9E677CF /* gh.png */,
+				649A64EA96DF88975DAA0F8F1DAAFBBE /* highlight.css */,
+				AEBD5D11EBCEC1F31F9FE11C74ACF559 /* highlight.css */,
+				30B4F2D10194487B4F2B92A26821FFD2 /* index.html */,
+				BD61EA567EB6B30E74C29A1D5E61FF88 /* index.html */,
+				F9565D975F745A9E4619AAC8F07DDF34 /* Info.plist */,
+				10FFA412E82AFDAA4FF982A5D2CB93E2 /* jazzy.css */,
+				8EC04AEF4AE83A6B06CB5835C91E4021 /* jazzy.css */,
+				362A3737D2713E669D6A2BFAFE65ED38 /* jazzy.js */,
+				630AF014F17B5190AB5DBCDBF55B3A2A /* jazzy.js */,
+				AE3EF0D6DB9CB09336A48995CA71B01D /* jquery.min.js */,
+				0CC51C3FC0F02F5B368FD44A435623C3 /* jquery.min.js */,
+				7839F05F9889D1D2596463792B51F32B /* LICENSE */,
+				239520E62AA19D5A55F01C5F3AD4CA97 /* LPThumbnailView.html */,
+				9B703AC218F89119FD27C80172028694 /* LPThumbnailView.html */,
+				9C505F67639448DEA14BC3F243D0FBDF /* LPThumbnailView.podspec */,
+				0C1C6AA7CF64EC1BDC81111C45C489FA /* LPThumbnailView.tgz */,
+				A15AE97429806FDEC174435A31715BF2 /* LPThumbnailViewAnimationStyle.html */,
+				828DAC0C1A611B4F4FC9842E2FE685B1 /* LPThumbnailViewAnimationStyle.html */,
+				286F33A00A02BBDF9047414289FD44F7 /* LPThumbnailViewDelegate.html */,
+				7F8BC1F9B268F96F69F164EADECE748B /* LPThumbnailViewDelegate.html */,
+				3199843DE28C19AABEA5BECD68BE8F13 /* Protocols.html */,
+				E5CA49C3615ACD83D9C12448AE9315AF /* Protocols.html */,
+				E4EEB8474693634249D57B873B33C40E /* README.md */,
+				13F82FD976E46D92E21EBD7F2513B031 /* search.json */,
+				5BC91B2C35D2E022376B787C46444889 /* search.json */,
+				CB8EDECFB68451C4E745A6E1BE8CA899 /* undocumented.json */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6B683B1B3A77FB723967D5198BFEB60B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1515899D427513467D9ED95FF3E3CE48 /* Info.plist */,
+				CA683E69B4FA3D5AAE1DB93080F3733B /* LPThumbnailView.modulemap */,
+				675712FF5589523263529AC829B6CE2A /* LPThumbnailView.xcconfig */,
+				5742E45277BAADC01977A31F7873680F /* LPThumbnailView-dummy.m */,
+				BB7D12A67E4B62D4B0400BFB13B1A6A9 /* LPThumbnailView-prefix.pch */,
+				A57A44252F44D107B66B933D5E3802F8 /* LPThumbnailView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LPThumbnailView";
+			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				985ACCC36A949362F53B0C4A0EE5CC2F /* Development Pods */,
+				A59F0322C073BB5928EDBCB7E61B1B8B /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				878BF5CE67569C5C82AF9E892F460C06 /* Products */,
 				8BDE34F2D7EEA4B216C541625833E261 /* Targets Support Files */,
@@ -121,97 +228,75 @@
 		8BDE34F2D7EEA4B216C541625833E261 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E8DDD4B58EADAE69B4952BBB76002A2C /* Pods-LPThumbnailViewExample */,
+				26EFF61F079D046183502C193A7EA403 /* Pods-LPThumbnailViewExample */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		985ACCC36A949362F53B0C4A0EE5CC2F /* Development Pods */ = {
+		A59F0322C073BB5928EDBCB7E61B1B8B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				652BCC0C9CF7AB8141E46E4AF9851C95 /* LPThumbnailView */,
+				BA88E9296D5812450A566D1F1A10DD28 /* LPThumbnailView */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BA88E9296D5812450A566D1F1A10DD28 /* LPThumbnailView */ = {
+			isa = PBXGroup;
+			children = (
+				9681CC0684DFE1E45850FCC7D9692FF3 /* LPShadowImageView.swift */,
+				3D3666ACEBB14B20F319F1CC6A2A90EB /* LPShadowView.swift */,
+				C19C4684395B8323F058AA30C9A2E270 /* LPThumbnailCounterView.swift */,
+				C0449AA33796F8DDCA45C176FEE6B524 /* LPThumbnailView.h */,
+				E618380369AD334A77467BE71FAA2386 /* LPThumbnailView.swift */,
+				B0FFAF493CDE4550F27029F88D0030BC /* LPThumbnailViewAnimationStyle.swift */,
+				98617C4C44865F6B3AB638BF2F0D6FAC /* LPThumbnailViewDelegate.swift */,
+				3244A8B6A21BB82DC793B585F82CA912 /* Pod */,
+				6B683B1B3A77FB723967D5198BFEB60B /* Support Files */,
+			);
+			name = LPThumbnailView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E8DDD4B58EADAE69B4952BBB76002A2C /* Pods-LPThumbnailViewExample */ = {
-			isa = PBXGroup;
-			children = (
-				70A60C35148D2FB55B4E3A05B5D48DD6 /* Info.plist */,
-				4239ECBAB0A5FF89CA59E8893CFE7D99 /* Pods-LPThumbnailViewExample.modulemap */,
-				DCB83FB411E8594BAF93AB914B017604 /* Pods-LPThumbnailViewExample-acknowledgements.markdown */,
-				1D4E1B5FD455D0A8086A809DEA7B8317 /* Pods-LPThumbnailViewExample-acknowledgements.plist */,
-				AA5209332A672CD0F1B7DB084860E0E5 /* Pods-LPThumbnailViewExample-dummy.m */,
-				5C2C5E9E476CC97745E84092B3E2BD42 /* Pods-LPThumbnailViewExample-frameworks.sh */,
-				A6909DB88EA9E64A776CCC1DD65F571B /* Pods-LPThumbnailViewExample-resources.sh */,
-				DC6369B210057C4B6BA410F277DD7CDA /* Pods-LPThumbnailViewExample-umbrella.h */,
-				03AD00C932C189F464C5D3F85DD30932 /* Pods-LPThumbnailViewExample.debug.xcconfig */,
-				D1B13AAB9B6992EB8DCDBC1E1804EA14 /* Pods-LPThumbnailViewExample.release.xcconfig */,
-			);
-			name = "Pods-LPThumbnailViewExample";
-			path = "Target Support Files/Pods-LPThumbnailViewExample";
-			sourceTree = "<group>";
-		};
-		F013674640B8582A54BBAF2DB98D09AB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F554A9063EE62FD023840142D23C5D23 /* Info.plist */,
-				36B858C35C7706EAC7A7CE90A589B0DE /* LPThumbnailView.modulemap */,
-				21855D541B0FF2BFFE8C9F1185B6F78A /* LPThumbnailView.xcconfig */,
-				ABC309A131EC6CC71605C38A61340537 /* LPThumbnailView-dummy.m */,
-				5CA60B1A9FACF29F28BEDEE94A35AF26 /* LPThumbnailView-prefix.pch */,
-				0F71892F308F04BAD03A1A806D797358 /* LPThumbnailView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LPThumbnailView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1C4EF14E7BC69C6604BB9DB8A6397D1B /* Headers */ = {
+		019C5B7A28FCBD878FF88F67017A4AF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FB78A3508F46424A7312C4D144189E2 /* Pods-LPThumbnailViewExample-umbrella.h in Headers */,
+				21896BEF874920371CEDBC6552EE8380 /* Pods-LPThumbnailViewExample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25168D0F0A26C077179F82A449B71A51 /* Headers */ = {
+		01FB754FAE57669929F69F2399F210B2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06E4A85043B966A787A1A47B57465C9B /* LPThumbnailView-umbrella.h in Headers */,
-				8BF4BC39F483D258D7A090C26428885E /* LPThumbnailView.h in Headers */,
+				56D35C4ECECF55B51AD25182E251C779 /* LPThumbnailView-umbrella.h in Headers */,
+				A22EC5C0368B6D1581B3412A680875B7 /* LPThumbnailView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4545B4523332A71480D6D0E6F72CC8C8 /* LPThumbnailView */ = {
+		C24F462D4A36A0D3337E5B7EA16A840C /* LPThumbnailView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B59F8F6439F91BD2C1E5DF1047081912 /* Build configuration list for PBXNativeTarget "LPThumbnailView" */;
+			buildConfigurationList = 9ECC20ACFB7DCF72E13E17EBEB3713BD /* Build configuration list for PBXNativeTarget "LPThumbnailView" */;
 			buildPhases = (
-				3CC76AF1BBB44DC2E939206C07CE7E20 /* Sources */,
-				84EB176F53E4CF8F5E516BEAC036F509 /* Frameworks */,
-				25168D0F0A26C077179F82A449B71A51 /* Headers */,
+				01FB754FAE57669929F69F2399F210B2 /* Headers */,
+				42A7D7BE4B723F51137F48EB2B78A7F7 /* Sources */,
+				601FB2E1C4FC08906DE32392CCA76655 /* Frameworks */,
+				5C6C76A6CB8C0B7946F7EA0B8B0FEA10 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -222,18 +307,19 @@
 			productReference = F0DD6D28EAF1B19275A612DE4458101D /* LPThumbnailView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F3614D88ED9C73C2BD638FB9E41DDCFA /* Pods-LPThumbnailViewExample */ = {
+		FCE9B483C0B825C9E97619D971848686 /* Pods-LPThumbnailViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C59252A42EF9F8A8F3ABA2C49CCA37 /* Build configuration list for PBXNativeTarget "Pods-LPThumbnailViewExample" */;
+			buildConfigurationList = 7FC748C35B004579270EE96F4C253E4B /* Build configuration list for PBXNativeTarget "Pods-LPThumbnailViewExample" */;
 			buildPhases = (
-				938BA2076E66C37D8C7FD4A663D01BDF /* Sources */,
-				90789E89BA533FD915FE122B29AB4AE1 /* Frameworks */,
-				1C4EF14E7BC69C6604BB9DB8A6397D1B /* Headers */,
+				019C5B7A28FCBD878FF88F67017A4AF5 /* Headers */,
+				64252432B669775F11FD21D90548D64B /* Sources */,
+				5D2D383CF52C51A65F1675B246F5BBFF /* Frameworks */,
+				F6CDC9059B6976F59230EF356BE7A38B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA058134711733A3E99797E74B2A341D /* PBXTargetDependency */,
+				960E1EDDA72660DB8F6654C6B196B4A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-LPThumbnailViewExample";
 			productName = "Pods-LPThumbnailViewExample";
@@ -246,8 +332,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -261,51 +347,69 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4545B4523332A71480D6D0E6F72CC8C8 /* LPThumbnailView */,
-				F3614D88ED9C73C2BD638FB9E41DDCFA /* Pods-LPThumbnailViewExample */,
+				C24F462D4A36A0D3337E5B7EA16A840C /* LPThumbnailView */,
+				FCE9B483C0B825C9E97619D971848686 /* Pods-LPThumbnailViewExample */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		3CC76AF1BBB44DC2E939206C07CE7E20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		5C6C76A6CB8C0B7946F7EA0B8B0FEA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F2C9C83B2B0644B3A174B6BF2432A8 /* LPShadowImageView.swift in Sources */,
-				9E4C2BBABAD25AE64BA3991205533095 /* LPShadowView.swift in Sources */,
-				3A321C1EE329BE607D131288990309AE /* LPThumbnailCounterView.swift in Sources */,
-				22F65AEC319794B4F17F23C18310D782 /* LPThumbnailView-dummy.m in Sources */,
-				CF5D41CF3817D3F836F7DC99849EC7DF /* LPThumbnailView.swift in Sources */,
-				BC0F6E3D1FDAFCA6D4F634532340CE00 /* LPThumbnailViewAnimationStyle.swift in Sources */,
-				E666AE340503149474A7F990A77C7031 /* LPThumbnailViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		938BA2076E66C37D8C7FD4A663D01BDF /* Sources */ = {
+		F6CDC9059B6976F59230EF356BE7A38B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42A7D7BE4B723F51137F48EB2B78A7F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B20FD9879DEF6D23DBB4AAFC26BB5A4 /* Pods-LPThumbnailViewExample-dummy.m in Sources */,
+				FCD288159FFB86EECA261746C048BDBA /* LPShadowImageView.swift in Sources */,
+				356DDE629D91EB08A5C059591E4EEAB3 /* LPShadowView.swift in Sources */,
+				93F991C639EA80DCDC29306FF13FAA26 /* LPThumbnailCounterView.swift in Sources */,
+				06A6AEFC3B392376F20FB7E62075CF76 /* LPThumbnailView-dummy.m in Sources */,
+				9F5AF734E622E2A15F0642FAB3C3443D /* LPThumbnailView.swift in Sources */,
+				68B67A9ECF5E47134146EF1B716F04C0 /* LPThumbnailViewAnimationStyle.swift in Sources */,
+				AA9CA6B57B4568D6F5C9910D048A19E5 /* LPThumbnailViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64252432B669775F11FD21D90548D64B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DF46A7AC8C70186136C8272D91C71A /* Pods-LPThumbnailViewExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AA058134711733A3E99797E74B2A341D /* PBXTargetDependency */ = {
+		960E1EDDA72660DB8F6654C6B196B4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LPThumbnailView;
-			target = 4545B4523332A71480D6D0E6F72CC8C8 /* LPThumbnailView */;
-			targetProxy = A7C227ECD8E68C4ADD57350B31050668 /* PBXContainerItemProxy */;
+			target = C24F462D4A36A0D3337E5B7EA16A840C /* LPThumbnailView */;
+			targetProxy = 11F5DC98A14010DA1C12423A686EF516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4D293624517B2E46C5C1B1BC0992DE7E /* Release */ = {
+		669F4B89F27BDAA81541F492D6D8D9BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21855D541B0FF2BFFE8C9F1185B6F78A /* LPThumbnailView.xcconfig */;
+			baseConfigurationReference = 675712FF5589523263529AC829B6CE2A /* LPThumbnailView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -321,12 +425,83 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LPThumbnailView/LPThumbnailView.modulemap";
+				PRODUCT_MODULE_NAME = LPThumbnailView;
 				PRODUCT_NAME = LPThumbnailView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		76DB609829587E62D45A2C3753DF7883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C6E9DB2B54B2A0EC344D065BDDF9914 /* Pods-LPThumbnailViewExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Pods-LPThumbnailViewExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CD70B02A048A7B5D619FC1F90518C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675712FF5589523263529AC829B6CE2A /* LPThumbnailView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LPThumbnailView/LPThumbnailView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LPThumbnailView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LPThumbnailView/LPThumbnailView.modulemap";
+				PRODUCT_MODULE_NAME = LPThumbnailView;
+				PRODUCT_NAME = LPThumbnailView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -334,10 +509,12 @@
 			};
 			name = Release;
 		};
-		53A0C04139BA792F89CE298239614E17 /* Debug */ = {
+		A5CDDD191A8CAE3F62135D924D3457BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21855D541B0FF2BFFE8C9F1185B6F78A /* LPThumbnailView.xcconfig */;
+			baseConfigurationReference = 5A5CE212F05752C9655383E8168925E7 /* Pods-LPThumbnailViewExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -347,25 +524,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LPThumbnailView/LPThumbnailView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LPThumbnailView/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LPThumbnailView/LPThumbnailView.modulemap";
-				PRODUCT_NAME = LPThumbnailView;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Pods-LPThumbnailViewExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
+		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,10 +556,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -386,6 +569,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -394,6 +578,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -415,51 +600,17 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		974809AC3DE0A8265F022F9F023468B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03AD00C932C189F464C5D3F85DD30932 /* Pods-LPThumbnailViewExample.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Pods-LPThumbnailViewExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LPThumbnailViewExample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
+		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -469,10 +620,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -480,6 +633,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -488,6 +642,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -507,44 +662,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		B8E5C23F6AA9A6892DF849A5CA3D8639 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1B13AAB9B6992EB8DCDBC1E1804EA14 /* Pods-LPThumbnailViewExample.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LPThumbnailViewExample/Pods-LPThumbnailViewExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LPThumbnailViewExample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -554,26 +675,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
-				98F29E7567052F62660DDD7069ADF73C /* Release */,
+				C92782E717C52E3633C9A5F211E7987A /* Debug */,
+				EA8C7AF90938697605468604B2A17B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B59F8F6439F91BD2C1E5DF1047081912 /* Build configuration list for PBXNativeTarget "LPThumbnailView" */ = {
+		7FC748C35B004579270EE96F4C253E4B /* Build configuration list for PBXNativeTarget "Pods-LPThumbnailViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53A0C04139BA792F89CE298239614E17 /* Debug */,
-				4D293624517B2E46C5C1B1BC0992DE7E /* Release */,
+				76DB609829587E62D45A2C3753DF7883 /* Debug */,
+				A5CDDD191A8CAE3F62135D924D3457BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C59252A42EF9F8A8F3ABA2C49CCA37 /* Build configuration list for PBXNativeTarget "Pods-LPThumbnailViewExample" */ = {
+		9ECC20ACFB7DCF72E13E17EBEB3713BD /* Build configuration list for PBXNativeTarget "LPThumbnailView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				974809AC3DE0A8265F022F9F023468B3 /* Debug */,
-				B8E5C23F6AA9A6892DF849A5CA3D8639 /* Release */,
+				669F4B89F27BDAA81541F492D6D8D9BA /* Debug */,
+				8CD70B02A048A7B5D619FC1F90518C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

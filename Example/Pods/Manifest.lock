@@ -1,16 +1,16 @@
 PODS:
-  - LPThumbnailView (1.0.0)
+  - LPThumbnailView (2.0.0)
 
 DEPENDENCIES:
-  - LPThumbnailView (from `~/Programming/iOS/LPThumbnailView`)
+  - LPThumbnailView (from `..`)
 
 EXTERNAL SOURCES:
   LPThumbnailView:
-    :path: ~/Programming/iOS/LPThumbnailView
+    :path: ".."
 
 SPEC CHECKSUMS:
-  LPThumbnailView: ea7308fb6082a12bc934dfb5a13fb968adc155cc
+  LPThumbnailView: 35a0c1cd661632578b93a46e1e25fc8d56c9e682
 
-PODFILE CHECKSUM: 4cd816856c525fefd4601f34d5414af2566b3a8d
+PODFILE CHECKSUM: 419aec648e1e3c91f9831b2d3371b537b5ad4af7
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.5.3

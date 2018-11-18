@@ -54,7 +54,7 @@ open class LPThumbnailView: UIView {
     /**
      The scale mode to use for the `imageView`.
      */
-    public var imageScaleMode: UIViewContentMode = .scaleAspectFill {
+    public var imageScaleMode: UIView.ContentMode = .scaleAspectFill {
         didSet { self.imageView.contentMode = self.imageScaleMode }
     }
 
@@ -115,7 +115,7 @@ open class LPThumbnailView: UIView {
     /**
      The animation options used when animating the counter view label change.
      */
-    public var counterViewAnimationOptions: UIViewAnimationOptions = [.transitionFlipFromBottom]
+    public var counterViewAnimationOptions: UIView.AnimationOptions = [.transitionFlipFromBottom]
 
     /**
      Whether or not this view automatically hides it self when there are no images to display.

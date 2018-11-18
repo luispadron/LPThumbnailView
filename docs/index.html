@@ -57,88 +57,22 @@
         <section>
           <section class="section">
             
-            <h2 id='lpthumbnailview' class='heading'>LPThumbnailView</h2>
+            <h1 id='lpthumbnailview' class='heading'>LPThumbnailView</h1>
+<h3 id='an-image-thumbnail-view-for-ios' class='heading'>An image thumbnail view for iOS.</h3>
 
-<p><img src="https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/.github/banner.png" alt="Banner"></p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/.github/thumbnail.png">
-</p>
-
-<h3 align="center">A contextual image thumbnail view for iOS.</h3>
-<h2 id='features' class='heading'>Features</h2>
-
-<ul>
-<li>Easy to use</li>
-<li>Sleek animations</li>
-<li>Customizeable</li>
-<li>Written in the latest Swift</li>
-</ul>
-<h2 id='installation' class='heading'>Installation</h2>
-<h3 id='cocoapods' class='heading'>CocoaPods</h3>
-
-<ol>
-<li>Install <a href="https://cocoapods.org">CocoaPods</a></li>
-<li><p>Add this repo to your <code>Podfile</code></p>
-<pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'Example'</span> <span class="k">do</span>
-    <span class="c1"># IMPORTANT: Make sure use_frameworks! is included at the top of the file</span>
-<span class="n">use_frameworks!</span>
-
-    <span class="n">pod</span> <span class="s1">'LPThumbnailView'</span>
-<span class="k">end</span>
-</code></pre></li>
-<li><p>Run <code>pod install</code></p></li>
-<li><p>Open up the <code>.xcworkspace</code> that CocoaPods created</p></li>
-<li><p>Done!</p></li>
-</ol>
-<h3 id='carthage' class='heading'>Carthage</h3>
-
-<p>To use with <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
-
-<ol>
-<li><p>Make sure Carthage is installed </p>
-
-<p><code>brew install carthage</code></p></li>
-<li><p>Add this repo to your Cartfile</p>
-
-<p><code>github &quot;luispadron/LPThumbnailView&quot;</code> </p></li>
-<li><p>Drag the <code>LPThumbnailView.framework</code> from <code>MyProjDir/Carthage/Builds/iOS/LPThumbnailView</code> into the <code>General -&gt; Embeded Binaries</code> section of your Xcode project.</p></li>
-</ol>
-<h3 id='manually' class='heading'>Manually</h3>
-
-<ol>
-<li>Simply download the source files from <a href="https://github.com/luispadron/LPThumbnailView/tree/master/luispadron">here</a> and drag them into your project.</li>
-</ol>
-<h2 id='usage' class='heading'>Usage</h2>
-<h3 id='simple-animation' class='heading'>Simple animation</h3>
-<pre class="highlight swift"><code><span class="c1">// Pick your animation style</span>
-<span class="n">thumbnailView</span><span class="o">.</span><span class="n">animationStyle</span> <span class="o">=</span> <span class="o">.</span><span class="n">enterFromRight</span> 
-<span class="c1">// Simply add an image to the thumbnail view, animation is handled for you!</span>
-<span class="n">thumbnailView</span><span class="o">.</span><span class="nf">addImage</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<p>A thumbnail view for iOS to give context to multiple images/videos using thumbnails and counter.</p>
+<h3 id='installation' class='heading'>Installation</h3>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'LPThumbnailView'</span>
 </code></pre>
+<h3 id='authors' class='heading'>Authors</h3>
 
-<p><img src="https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/.github/animation1.gif" alt="Demo gif 1"></p>
-<h3 id='contextual-animation' class='heading'>Contextual animation</h3>
-<pre class="highlight swift"><code><span class="c1">// Create/use an existing image view you would like to be animated to the position of the thumbnail.</span>
-<span class="k">let</span> <span class="nv">imgView</span> <span class="o">=</span> <span class="kt">UIImageView</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="n">someImage</span><span class="p">)</span>
-<span class="c1">// Animation from imgView to thumbnail is handled for you!</span>
-<span class="c1">// imgView will animate to the correct frame and will be removed from the super view on completion of animation.</span>
-<span class="n">thumbnailView</span><span class="o">.</span><span class="nf">addImageWithContext</span><span class="p">(</span><span class="n">imgView</span><span class="p">)</span>
-</code></pre>
-
-<p><img src="https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/.github/animation2.gif" alt="Demo gif 2" height="500" width="400"></p>
-<h2 id='documentation' class='heading'>Documentation</h2>
-
-<p>Please read the docs <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/luispadron/LPThumbnailView/master/docs/Classes/LPThumbnailView.html">here</a> for more information and before posting an issue.</p>
-<h2 id='example-project' class='heading'>Example Project</h2>
-
-<p>Take a look at the example project <a href="https://github.com/luispadron/LPThumbnailView/tree/master/Example">here</a> </p>
+<p>Luis</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://luispadron.com" target="_blank" rel="external">Luis</a>. All rights reserved. (Last updated: 2017-12-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://luispadron.com" target="_blank" rel="external">Luis</a>. All rights reserved. (Last updated: 2018-11-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -1,6 +1,6 @@
 {
   "name": "LPThumbnailView",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "An image thumbnail view for iOS.",
   "description": "A thumbnail view for iOS to give context to multiple images/videos using thumbnails and counter.",
   "homepage": "https://github.com/luispadron/LPThumbnailView",
@@ -14,14 +14,14 @@
   },
   "social_media_url": "https://luispadron.com",
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "source": {
     "git": "https://github.com/luispadron/LPThumbnailView.git",
-    "tag": "v1.0.0"
+    "tag": "v2.0.0"
   },
   "source_files": [
-    "LPThumbnailView",
-    "LPThumbnailView/**/*.{h,m}"
+    "src/LPThumbnailView",
+    "src/LPThumbnailView/**/*.{h,m}"
   ]
 }

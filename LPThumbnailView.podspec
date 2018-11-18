@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LPThumbnailView"
-  s.version      = "1.1.2"
+  s.version      = "2.0.0"
   s.summary      = "An image thumbnail view for iOS."
 
   s.description  = <<-DESC
@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/luispadron/LPThumbnailView.git", :tag => "v#{s.version}" }
 
-  s.source_files  = "LPThumbnailView", "LPThumbnailView/**/*.{h,m}"
+  s.source_files  = "src/LPThumbnailView", "src/LPThumbnailView/**/*.{h,m}"
 end
 

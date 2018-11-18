@@ -57,7 +57,7 @@ internal class LPShadowImageView: LPShadowView {
     }
 
     /// The content mode for the `imageView`
-    override var contentMode: UIViewContentMode {
+    override var contentMode: UIView.ContentMode {
         didSet { self.imageView.contentMode = self.contentMode }
     }
 
